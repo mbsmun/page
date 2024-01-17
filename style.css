@@ -9,3 +9,10 @@ body {
     background-color: var(--bg);
     color: var(--text)
 }
+
+.rectangulo {
+    width: 200px;
+    height: 100px;
+    background-color: var(--dg);
+    margin: 20px;
+}
