@@ -16,3 +16,15 @@ body {
     background-color: var(--dg);
     margin: 20px;
 }
+
+.circulo{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    }
+.circulo{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        }
