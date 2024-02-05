@@ -1,31 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dsada</title>
-    <link rel="Stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body{
-            background-color: var(--text);
-            color: var(--bg);
-            
+        /* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
 
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
-        h1{
-            margin-top: 50px;
-            border-top: 1px solid #FDFF;
+
+        #searchbar {
+            width: 100%;
+            height: 25%;
+            font-size: 1rem;
+            background-color: #121212;
+        }
+        
+        #searchss::after {
+            content: "";
             background-color: var(--text);
-            color: var(--bg);
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: relative;
+            left:-100%;
+            top: calc(100% - 1px);
+            transition: left 0.3s ease;
+        }
+
+        #searchss:hover::after {
+            left:0%;
+        }
+
+        #searchss {
+            display: block;
+            width: 45%;
+            margin: auto;
+            height: 20%;
+            overflow: hidden;
+        }
+
+        #searchss input{
+            width: 85%;
+            height: 100%;
+            float: left;
+            background-color: transparent;
+            color: var(--text);
+            outline: none;
+            border: none;
+            font-size: 1rem;
+        }
+
+        #searchss button {
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            float: right;
+            aspect-ratio: 1/1;
+            transition: transform 0.3s ease;
+        }
+
+        #searchss button:hover {
+            transform: scale(125%);
+        }
+
+        #elements {
+            background-color: var(--bg);
+            overflow-y: scroll;
+            position: relative;
+            transition: top 0.3s ease, height 0.3s ease;
+        }
+
+        input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        input[type=checkbox]:checked + span {
+            background-color: var(--dg);
+        }
+
+        #filters {
+            padding-top: 10px;
+            height: 80%;
+            overflow-y: scroll;
+        }
+
+        #filters span {
+            margin:10px 0;
+            display: inline-block;
+            padding: 7px;
+            font-weight: bold;
+            border: solid 1px var(--dg);
+            cursor: pointer;
+            border-radius: 10000px;
+            transition: background-color 0.3s ease;
+        }
+
+        #elements {
+            display: flex;
+            padding-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        #elements div {
+            border-radius: 25px;
+            background-color: #121212;
+            flex: 25%;
+            margin: 5px;
+            overflow: hidden;
+            max-height: 65%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #elements div .title {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: var(--dg);
+            display: block;
+            height: 15%;
+            margin-bottom: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #elements div * {
+            position: relative;
+            top: -25px;
+        }
+
+        #elements div p {
+            display: block;
+            margin: 0 5px;
+            text-align: justify;
+        }
+        .title img {
+            height: 100%;
+            aspect-ratio: 1/1;
+            margin-right: 10px;
+            float: right;
+            top: 0 !important;
+        }
+        #elements span {
+            top: 0;
+            margin: 0 5px;
+            font-size: 0.8rem;
+            padding: 5px;
+            border-radius: 1000px;
+            background-color: var(--dg);
+        }
+
+        #elements .Committee:hover {
+            border: var(--dg) 1px solid;
+            transform: scale(101%);
+            cursor: pointer;
+        }
+
+        #elements .Committee:hover .title {
+            border: var(--dg) 1px solid;
+            background-color: transparent;
+        }
+
+        header h1 {
+            margin: 0;
+            width: 50%;
+            display: inline-block;
+            height: 100%;
+        }
+
+        header nav {
+            width: 49%;
+            text-align: right;
+            display: inline-block;
+            margin: 0;
+            border-radius: 1000px;
+        }
+
+        @media (max-width: 1000px){
+            #elements div {
+                flex: 100%;
+            }
+            #searchss {
+                width: 90%;
+                border-bottom: 1px solid var(--text);
+            }
+            #searchss input {
+                width: 70%;
+            }
+            header h1 {
+                position: absolute;
+                top:-100%;
+            }
+
+            header nav {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+                margin: 0;
+                position: relative;
+                top: 15%;
+            }
+        }
+
+        header {
+            background-color: #121212;
+            height: 5%;
+            padding: 5px;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text);
+            padding: 10px;
+            border-left: 1px solid var(--dg);
+            border-right: 1px solid var(--dg);
+            transition: background-color 0.3s ease-in-out;
+            background-color: var(--bg);
+        }
+
+        a:first-of-type {
+            border-left: none !important;
+            border-top-left-radius: 1000px;
+            border-bottom-left-radius: 1000px;
+        }
+
+        a:last-of-type {
+            border-top-right-radius: 1000px;
+            border-bottom-right-radius: 1000px;
+        }
+
+        a:hover {
+            background-color: var(--dg);
         }
     </style>
-</head> 
+    <title>Document</title>
+</head>
 <body>
-    <h1> lorem
-    </h1>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsum in amet nam! Tenetur atque numquam quidem nobis, recusandae nemo minima ab ratione officia velit qui optio nam vero culpa itaque. Labore earum rem expedita aspernatur, necessitatibus pariatur quod molestias, deserunt voluptatum amet quasi facilis unde quos nesciunt nostrum blanditiis!
-    Victoria
-    Esta es la pagina de comites
+    <header>
+        <h1>
+            MBSMUN
+        </h1>
+        <nav>
+            <a href="">home</a>
+            <a href="">About</a>
+            <a href="">Extra</a>
+        </nav>
+    </header>
+    <div id="searchbar">
+        <div id="searchss">
+        <input type="search" name="" id="search" autocomplete="off"><button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"viewBox="0 0 50 50">
+                <path fill="#FFFFFF" d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                </svg>
+        </button>
+        <button type="button" onclick="filterflip()"><svg id="filterIcon" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 30 30" id="filter"><path fill="#FFFFFF" d="M17 11H4A1 1 0 0 1 4 9H17A1 1 0 0 1 17 11zM26 11H22a1 1 0 0 1 0-2h4A1 1 0 0 1 26 11z"></path><path fill="#FFFFFF" d="M19.5 13.5A3.5 3.5 0 1 1 23 10 3.5 3.5 0 0 1 19.5 13.5zm0-5A1.5 1.5 0 1 0 21 10 1.5 1.5 0 0 0 19.5 8.5zM26 21H13a1 1 0 0 1 0-2H26A1 1 0 0 1 26 21zM8 21H4a1 1 0 0 1 0-2H8A1 1 0 0 1 8 21z"></path><path fill="#FFFFFF" d="M10.5,23.5A3.5,3.5,0,1,1,14,20,3.5,3.5,0,0,1,10.5,23.5Zm0-5A1.5,1.5,0,1,0,12,20,1.5,1.5,0,0,0,10.5,18.5Z"></path></svg></button>
+    </div>
+        <div id="filters">
+        </div>
+    </div>
+    <div id="elements" style="top:-20%; height: 90%">
+
+        <div class="Fun Committee CrisisManagement GlobalIssues">
+            <H1 class="title">Comite <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>Tasked with addressing complex global security issues and overseeing crisis management, the UNSC (United Nations Security Council) stands as the vanguard in maintaining international peace and security. Delegates in this committee collaborate on resolutions to mitigate multifaceted threats to global stability. Engaging in high-stakes negotiations, the UNSC offers a stimulating and thought-provoking experience for participants. (Difficulty: Moderate)</p>
+        </div>
+        
+        <div class="Exciting Committee Technology SpaceExploration">
+            <H1 class="title">ISC <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The ISC (International Space Collaboration) Committee embarks on an exciting journey into the realm of technology and space exploration. Delegates delve into discussions on cutting-edge technological advancements, space exploration strategies, and international collaboration to ensure peaceful and cooperative use of outer space. This committee promises an exhilarating experience for those passionate about the future of technology and space. (Difficulty: Exciting)</p>
+        </div>
+        
+        <div class="Challenging Committee Healthcare Epidemics">
+            <H1 class="title">GHE <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The GHE (Global Health and Epidemic) Committee takes on the formidable challenge of achieving equitable healthcare access worldwide. Delegates engage in intricate discussions on addressing epidemics, improving global health outcomes, and shaping policies to ensure health equity. This committee offers a challenging yet rewarding experience for participants committed to making a significant impact on global health. (Difficulty: Challenging)</p>
+        </div>
+        
+        <div class="Adventurous Committee ClimateChange Sustainability">
+            <H1 class="title">EnvSust <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The EnvSust (Environmental Sustainability) Committee embarks on an adventurous journey to combat climate change and pursue sustainable development on a global scale. Delegates explore innovative solutions, discuss policy frameworks, and engage in strategic planning to address the pressing challenges posed by environmental issues. This committee promises an adventurous and impactful experience for those passionate about environmental sustainability. (Difficulty: Adventurous)</p>
+        </div>
+        
+        <div class="Fun Committee Trade EconomicGrowth">
+            <H1 class="title">ITF <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The ITF (International Trade and Economic Development) Committee offers a fun and dynamic platform for delegates to discuss policies and strategies for international trade, economic growth, and development. Engaging in lively debates and negotiations, participants explore ways to foster economic cooperation and prosperity on a global scale. This committee promises a fun and intellectually stimulating experience for all involved. (Difficulty: Fun)</p>
+        </div>
+        
+        <div class="Exciting Committee CulturalHeritage ArtsPromotion">
+            <H1 class="title">CHB <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The CHB (Cultural Heritage Preservation and Arts Promotion) Committee immerses participants in an exciting exploration of cultural heritage and arts promotion. Delegates collaborate to foster understanding and appreciation among nations for their rich cultural heritage. Engaging in discussions on the role of arts in diplomacy, this committee promises an exciting and culturally enriching experience for participants. (Difficulty: Exciting)</p>
+        </div>
+        
+        <div class="Challenging Committee HumanRights Equality">
+            <H1 class="title">HRSJ <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The HRSJ (Human Rights and Social Justice) Committee is at the forefront of addressing human rights violations, promoting equality, and advocating for social justice on a global scale. Engaging in challenging discussions, delegates work towards creating a world where every individual's rights are protected and justice prevails. This committee offers a challenging and impactful experience for participants passionate about human rights. (Difficulty: Challenging)</p>
+        </div>
+        
+        <div class="Adventurous Committee GenderEquality WomenEmpowerment">
+            <H1 class="title">GEWE <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The GEWE (Gender Equality and Women Empowerment) Committee focuses on promoting gender equality and addressing issues related to women's rights, empowering women globally. Engaging in adventurous discussions, delegates work towards creating a world where gender disparities are eliminated, and women are empowered in all aspects of life. This committee promises an adventurous and impactful experience for participants committed to gender equality. (Difficulty: Adventurous)</p>
+        </div>
+        
+        <div class="Fun Committee SustainableAgriculture FoodSecurity">
+            <H1 class="title">SAFS <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The SAFS (Sustainable Agriculture and Food Security) Committee addresses sustainable agricultural practices and strategies to ensure global food security. Participants engage in fun and insightful discussions on feeding the world's growing population while promoting environmental sustainability. This committee offers a fun and intellectually stimulating experience for those passionate about agriculture and food security. (Difficulty: Fun)</p>
+        </div>
+        
+        <div class="Exciting Committee Disarmament Peacekeeping">
+            <H1 class="title">DPTF <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The DPTF (Disarmament and Peacekeeping Task Force) Committee tackles the exciting challenge of disarmament efforts and peacekeeping missions worldwide. Engaging in discussions on global security and diplomatic negotiations, participants work towards fostering peace and stability on an international scale. This committee promises an exciting and impactful experience for those passionate about global peace. (Difficulty: Exciting)</p>
+        </div>
+        
+        <div class="Challenging Committee TechEthics AIRegulation">
+            <H1 class="title">TEAIR <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The TEAIR (Technology Ethics and Artificial Intelligence Regulation) Committee delves into challenging discussions on ethical considerations in technology development, with a specific focus on artificial intelligence. Participants explore the ethical implications of AI and work towards establishing regulatory frameworks to ensure responsible and ethical use of technology. This committee offers a challenging and thought-provoking experience for those interested in the intersection of technology and ethics. (Difficulty: Challenging)</p>
+        </div>
+
+        <div class="Adventurous Committee GlobalLeadership Diplomacy">
+            <H1 class="title">GLD <img src="https://pngfre.com/wp-content/uploads/sun-50-1024x1024.png" alt="" srcset=""></H1>
+            <p>The GLD (Global Leadership and Diplomacy) Committee invites participants on an adventurous journey into the realm of global leadership and diplomacy. Engaging in dynamic discussions on international relations, diplomatic strategies, and global cooperation, delegates work towards fostering effective leadership on the world stage. This committee promises an adventurous and impactful experience for those passionate about diplomacy and global leadership. (Difficulty: Adventurous)</p>
+        </div>
+        <p style="background-color: #121212; color: var(--text); padding:5px 0; width: 100%; text-align: center;">&copy; 2024 MBS MUN Web Page. All rights reserved.</p>
+    </div>
+    <script>
+        let showingFilters = false
+        function filterflip(){
+            let elems = document.getElementById("elements")
+            showingFilters = !showingFilters
+            if(showingFilters){
+                elems.style.top = "0%"
+                elems.style.height = "70%"
+                document.getElementById("filterIcon").style.transform = "scale(125%)"
+            }else{
+                elems.style.top = "-20%"
+                elems.style.height = "90%"
+                document.getElementById("filterIcon").style.transform = ""
+            }
+        }
+
+        let filterChosen = new Set();
+        function checkFilt(){
+            let elems = document.getElementById("elements").children
+            for (let i = 0; i<elems.length; i++){
+                cont = false
+                let _temp = filterChosen.values()
+                for (let n = 0; n<filterChosen.size; n++){
+                    if (!elems[i].classList.contains(_temp.next().value)){
+                        elems[i].style.visibility = "hidden"
+                        elems[i].style.position = "absolute"
+                        cont = true
+                        break
+                    }
+                }
+                if(cont){
+                    continue
+                }
+                if(!elems[i].getElementsByClassName("title")[0].innerHTML.toLowerCase().includes(search.value.toLowerCase())){
+                    elems[i].style.visibility = "hidden"
+                    elems[i].style.position = "absolute"
+                }else{
+                    elems[i].style.visibility = "visible"
+                    elems[i].style.position = "relative"
+                }
+            }
+        }
+        filters = new Set()
+        let elems = document.getElementById("elements").children
+        for (let i = 0; i<elems.length; i++){
+            tags = document.createElement("div")
+            descr = elems[i].getElementsByTagName("p")[0]
+            if (descr == undefined){
+                continue;
+            }
+            elems[i].onclick = ()=>{
+                window.location = elems[i].getElementsByClassName("title")[0].innerText.toLowerCase() + ".html"
+            }
+            for (let n = 0; n<elems[i].classList.length; n++){
+                filters.add(elems[i].classList[n])
+                let tag = document.createElement("span")
+                tag.innerText = elems[i].classList[n]
+                tags.appendChild(tag)
+            }
+            elems[i].removeChild(descr)
+            elems[i].appendChild(tags)
+            elems[i].appendChild(descr)
+        }
+        let val = filters.values()
+        for (let i = 0; i<filters.size; i++){
+            let check = document.createElement("input")
+            check.type = "checkbox"
+            check.id = val.next().value
+            let text = document.createElement("span")
+            text.innerText = check.id
+            text.onclick = ()=>{
+                check.checked = !check.checked
+                if(check.checked){
+                    filterChosen.add(check.id)
+                }else{
+                    filterChosen.delete(check.id)
+                }
+                console.log(filterChosen)
+                checkFilt()
+            }
+            document.getElementById("filters").appendChild(check)
+            document.getElementById("filters").appendChild(text)
+        }
+        let search = document.getElementById("search")
+        search.onchange = checkFilt
+    </script>
 </body>
 </html>
