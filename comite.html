@@ -1,57 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Plantilla</title>
+    <title>Comite web Page</title>
     <style>
         :root {
-    --bg: #1B1B1B;
-    --text: #F9FBF2;
-    --lg: #09814A;
-    --dg:#2D4739;
-}
+        --bg: #1B1B1B;
+        --text: #F9FBF2;
+        --lg: #09814A;
+        --dg:#2D4739;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #495057;
+        }
 
-body {
-    background-color: var(--bg);
-    color: var(--text)
-}
+        header {
+            background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png");
+            background-size: 15%;
+            background-color: var(--dg);
+            color:var(--bg);
+            text-align: center;
+            padding: 20px;
+        }
 
-.rectangulo {
-    width: 200px;
-    height: 100px;
-    background-color: var(--dg);
-    margin: 20px;
-}
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:var(--bg);
+            box-shadow: 0 0 10px rgba(230, 226, 226, 0.1);
+            border-radius: 5px;
+        }
 
-.circulo{
-    background-color: blue;
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    }
+        h1{
+            text-align: center;
+            color: var(--bg);
+            margin-top: 150px;
+            font-size: 48pt;
+            font-family:"Protest Strike Regular";
+        }
+        h2,
+        h3 {
+            color: #0074cc;
+        }
 
-.circulo{
-    background-color: blue;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    align-items: center;
-    }
-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18pt;
-    color: var(--text);
-}
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+            font-size: 14pt;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ED1D24;
+            color: var(--text);
+        }
+        .circulo {
+            width: 200px;
+            height: 200px;
+            background-color: var(--text);
+            border-radius: 50%;
+            border: 5px solid var(--text);
+  
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
     </style>
-   
 </head>
-<body>
-    <h1>Para cada comité</h1>
-    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quia repellat blanditiis quaerat quod? Alias labore similique dolorem molestias corrupti! Quibusdam soluta neque maiores ad explicabo quae quam nisi nihil! Sed deleniti quisquam possimus, doloribus quam unde mollitia corporis magni. Molestias ipsa odit eius debitis, fuga mollitia quisquam eos dolorem?</p>
-    <div class="rectangulo"></div>
-    <div class="circulo"></div>
 
+<body>
+    <header>
+        <h1>Nombre comité</h1>
+        <div class="container">
+            <div class="circulo"></div>
+            </div>
+    </header>
+
+    <main>
+        <section>
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis quod quaerat corporis laborum? Non rerum inventore fugiat dolores iusto cum aspernatur repellat. Suscipit, vero. Praesentium sunt, ea aperiam maiores facere, ab perferendis consequatur fuga alias inventore, nulla qui. Reprehenderit ducimus nesciunt ullam omnis. Sequi porro vel recusandae culpa! Enim expedita harum non magni. Nulla consectetur quia voluptate tempore, cum, dignissimos qui fugiat est fuga minus sed deserunt suscipit possimus at incidunt repellat? Alias labore cumque harum, quae, commodi incidunt optio quam voluptate magni necessitatibus in dolor. Enim beatae repudiandae voluptate, quibusdam, numquam ratione quod hic fugit possimus, neque ipsum? Et autem rem iure dolor, ad suscipit consectetur molestias ea, nihil reiciendis delectus non pariatur, in hic. Deserunt vitae eligendi quas nulla voluptate laudantium, quos aliquid deleniti perspiciatis voluptatibus in voluptatem omnis beatae nam praesentium obcaecati possimus quibusdam ut sit! Deleniti nam placeat distinctio illo ducimus officia accusantium expedita, aut adipisci officiis, assumenda quis cum recusandae. Ad et, ipsum, tempora earum tempore aut quos debitis, necessitatibus saepe exercitationem quas ratione repellat ex sed maxime incidunt distinctio dicta accusamus aperiam delectus cupiditate. Impedit perspiciatis facere quis quae voluptatibus veniam, quasi adipisci? Ut odio quasi exercitationem velit quas cupiditate quis fugit est cum deserunt totam vel ad provident omnis minus modi, laborum atque nisi culpa veritatis fugiat quia numquam? Ipsam optio sapiente deserunt veritatis quo, enim adipisci voluptates omnis obcaecati repudiandae debitis natus hic. Natus, eveniet. Mollitia molestias temporibus itaque, suscipit veniam dolorem reiciendis quae repudiandae? Architecto a quae eveniet unde quibusdam?</p>
+        </section>
+        <section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MBS MUN Web Page. All rights reserved.</p>
+    </footer>
 </body>
+
+</html>
+
+    <footer>
+    </footer>
+  </body>
 </html>
