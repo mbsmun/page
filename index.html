@@ -1,82 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dsada</title>
-    <link rel="Stylesheet" href="style.css">
-    <style>
-        :root {
-    
-    --text: #fff9f9; 
-    --accent: #1e00ff;
-    --accent-light: #000dff;
-    
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dsada</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --text: #ffffff; /* Fix: Change the variable name */
+      --accent: #1e00ff;
+      --accent-light: #000dff;
+    }
 
-body {
-    
-    background-color: #121212;;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding-top: 0px;
-    margin-top: 0px;
-}
-header {
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 10px;
-    color: var(--text);
-    font-weight: bold;
-    font-size: 60px;
-    margin: 40px; 
-    background-color: #121212;
-    
-}
-p {
-    color: var(--text);
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px;
-   
-    
-}
-
-h3 {
-    text-align: left;
-    color: #121212;
-  
-    width: 648px; 
-     padding: 15px;
-    background-color: var(--accent-light); /* Apply the lighter background color */
-
-}
-
-h3 a {
-            
-            transition: color 0.3s ease-in-out;
-            color: #000;
-            text-align: right;
-            
-           
-        }
-        
     body {
-        padding-left: 40px;
-        padding-right: 40px;}
+      background-color: #000;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      padding: 30px;
+      margin-top: 0px;
+      background-image: url("https://i.redd.it/aijl69z9c6b21.png");
+      background-size: 20%;
+    }
 
-    </style>
-</head> 
+    header {
+      text-align: center;
+      color: var(--text);
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold; 
+      font-size: 100px;
+      text-align: center;
+    }
+
+    p {
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+
+      padding: 100px;
+      text-align: justify;
+    }
+
+    p1 {
+      color: var(--text);
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ED1D24;
+      color: var(--text);
+      padding: 15px;
+      align-items: center;
+   
+    }
+    a{
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+    }
+    h3 {
+      color: var(--text);
+      width: 100%;
+      padding: 15px;
+      background-color: var(--accent-light);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .logo {
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .committees-link {
+      text-align: right;
+    }
+
+    
+
+    .gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+      justify-content: center;
+    }
+
+    .image {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .image img {
+      height: 200px;
+      display: block;
+    }
+
+    .image:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
 <body>
-    <div class="top-section">
+  <div class="top-section">
     <header>
-        <h3><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmontessori-british-school-mbs&psig=AOvVaw0CgQ5buyqyiQmf4tXoknIv&ust=1706063605648000&source=images&cd=vfe&ved=0CBMQjRxqFwoTCNjJ7Ku88oMDFQAAAAAdAAAAABAE"> MBS MUN               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      <a href="comittees.html">Committees Section</a></h3>
-        <body1> </body1><h1>MBS MUN 
-        </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-        </body1>
+      <div class="header-content">
+        <div class="logo">
+          <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="30" align="left">
+        </div>
+        <div class="committees-link">
+          <a href="comittees.html">Committees Section</a>
+        </div>
+      </div>
     </header>
-</div>  
+
+      <h1>MBS MUN</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    <div class="gallery">
+      <div class="image">
+        <img src="https://live.staticflickr.com/65535/53009239148_916bf062c6_b.jpg" alt="Image 1">
+      </div>
+      <div class="image">
+        <img src="https://live.staticflickr.com/5332/8961839381_15ed8dc91f_b.jpg" alt="Image 2">
+      </div>
+      <div class="image">
+        <img src="https://i.vimeocdn.com/video/1622042479-f8013411b55fd240803802f91c43fcdf44046926c1ca126609348caed43726b6-d_640?f=webp" alt="Image 3">
+      </div>
+    </div>
+   
+    <footer>
+      
+      <p1>&copy; 2024 MBS MUN Web Page. All rights reserved.</p1>
+    </footer>
+  </div>
 </body>
+
+</html>
