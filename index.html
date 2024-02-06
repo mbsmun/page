@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     :root {
-      --text: #ffffff; /* Fix: Change the variable name */
+      --text: #ffffff; 
       --accent: #1e00ff;
       --accent-light: #000dff;
     }
@@ -62,6 +62,7 @@
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
     }
+   
     h3 {
       color: var(--text);
       width: 100%;
@@ -82,6 +83,10 @@
 
     .committees-link {
       text-align: right;
+      padding-right: 20px;
+    }
+     .insta-link {
+      text-align: right;
     }
 
     
@@ -93,9 +98,35 @@
       gap: 20px;
       padding: 10px;
       justify-content: center;
+     flex-direction: row;
+ 
     }
 
-    .image {
+    .image1 {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .image5 {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .image2 {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .image3 {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .image4 {
       margin: 10px;
       overflow: hidden;
       border-radius: 8px;
@@ -118,10 +149,15 @@
     <header>
       <div class="header-content">
         <div class="logo">
+            <a href="https://media.licdn.com/dms/image/C4D03AQEYaEc_Wvcs2w/profile-displayphoto-shrink_400_400/0/1621976755734?e=2147483647&v=beta&t=BS_eRHquIs1M4xkX9sXaSzqRbdrzv_lhtBW-y5Dvwes" target="_blank">
           <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="30" align="left">
         </div>
         <div class="committees-link">
           <a href="comittees.html">Committees Section</a>
+        </div>
+        <div class="insta-link">
+        <a href="https://www.instagram.com" target="_blank">
+  <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 20px;"> </a>
         </div>
       </div>
     </header>
@@ -137,6 +173,12 @@
       </div>
       <div class="image">
         <img src="https://i.vimeocdn.com/video/1622042479-f8013411b55fd240803802f91c43fcdf44046926c1ca126609348caed43726b6-d_640?f=webp" alt="Image 3">
+      </div>
+      <div class="image">
+        <img src="https://thumbs.dreamstime.com/b/united-nations-day-background-illustration-196780339.jpg" alt="Image 4">
+      </div>
+      <div class="image">
+        <img src="https://live.staticflickr.com/5332/8961839381_15ed8dc91f_b.jpg" alt="Image 5">
       </div>
     </div>
    
