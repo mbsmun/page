@@ -17,7 +17,15 @@
       background-position: right bottom;
       
     }
-
+	h5 {
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: #FFF3F3;
+	text-align:center;
+	align-items: center;
+	font-size: 30px;
+	padding-top:40px;
+	
+ }
     :root {
       --text: #ffffff;
       --accent: #1e00ff;
@@ -314,6 +322,40 @@
       </div>
     </header>
     <div class="golden-line"></div>
+	
+	
+	<h5 id="demo">114d 5h 36m 44s</h5>
+
+	<script>
+	
+	var countDownDate = new Date("Jun 16, 2024, 5:00:00").getTime();
+
+	
+	var x = setInterval(function() {
+
+	
+	  var now = new Date().getTime();
+
+	  
+	  var distance = countDownDate - now;
+
+	  
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	  
+	  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+
+	  if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("demo").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
+	</script>
+</div>
     <h1>MBS MUN XII</h1>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
@@ -373,7 +415,6 @@
     <footer>
       <p1>&copy; 2024 MBS MUN Web Page. All rights reserved.</p1>
     </footer>
-  </div>
 </body>
 
 </html>
