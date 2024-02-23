@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dsada</title>
   <link rel="stylesheet" href="style.css">
+  
   <style>
+	  
     .golden-line {
       width: 100%;
       height: 6px;
@@ -23,8 +25,9 @@
     }
 
     body {
-      background-color: #1c2e4a;
+      background-color: #1E314E;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	  
       padding: 30px;
       margin-top: 0px;
       background-size: 20%;
@@ -40,7 +43,8 @@
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
       font-weight: bold;
-      font-size: 100px;
+	  padding-top: 50px;
+      font-size: 120px;
       text-align: center;
       background: linear-gradient(180deg, #ffd700, #ffd8e0);
       -webkit-background-clip: text;
@@ -50,7 +54,8 @@
     p {
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
-      padding: 1px;
+      padding: 50px;
+      font-size: 15pt;
       text-align:justify;
      
       
@@ -58,7 +63,7 @@
     }
 
     p1 {
-      color: var(--text);
+      color: #00FFFF;
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
     }
@@ -72,15 +77,17 @@
     }
     footer {
       text-align: center;
-      background-color: #ED1D24;
+      background-color: #002080;
       color: var(--text);
-      padding: 1px;
-      align-items: center;
+	   align-items: center;
     }
 
     a {
       color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
+      font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	  font-size: 30px;
+	
+	  
     }
 
     h3 {
@@ -110,35 +117,181 @@
       text-align: right;
     }
 
-    .gallery {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 10px;
-      justify-content: center;
-      flex-direction: row;
-    }
+      
+*,
+		*:before,
+		*:after {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-    .image1,
-    .image2,
-    .image3,
-    .image4,
-    .image5 {
-      margin: 10px;
-      overflow: hidden;
-      border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
-    }
 
-    .image img {
-      height: 200px;
-      display: block;
-    }
+		.wrapper {
+			max-width: 75rem;
+			padding-top: 5rem;
+			margin: 0 auto;
+		}
 
-    .image:hover {
-      transform: scale(1.1);
-    }
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(8, 12.5rem);
+			gap: .5rem;
+		}
+
+		.gallery__item--1 {
+			grid-column: 1 / span 1;
+			grid-row: 1 / span 1;
+		}
+
+		.gallery__item--2 {
+			grid-column: 1 / span 1;
+			grid-row: 2 / span 1;
+		}
+
+		.gallery__item--3 {
+			grid-column: 2 / span 1;
+			grid-row: 1 / span 2;
+		}
+
+		.gallery__item--4 {
+			grid-column: 3 / span 1;
+			grid-row: 1 / span 3;
+		}
+
+		.gallery__item--5 {
+			grid-column: 1 / span 2;
+			grid-row: 3 / span 2;
+		}
+
+		.gallery__item--6 {
+			grid-column: 3 / span 1;
+			grid-row: 4 / span 1;
+		}
+
+		.gallery__link {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.gallery__overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: rgba(0, 0, 0, 0.4);
+			font-size: 1.5rem;
+			color: #fff;
+			font-weight: 700;
+			text-transform: uppercase;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .2s;
+		}
+
+		.gallery__link:hover .gallery__overlay {
+			opacity: 1;
+		}
+
+		.gallery__overlay span {
+			position: relative;
+			line-height: 3rem;
+		}
+
+		.gallery__overlay span:before,
+		.gallery__overlay span:after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 0;
+			transition: width .3s ease-out .2s;
+		}
+
+		.gallery__overlay span:before {
+			top: 0;
+			left: 0;
+		}
+
+		.gallery__overlay span:after {
+			bottom: 0;
+			right: 0;
+		}
+
+		.gallery__link:hover .gallery__overlay span:before,
+		.gallery__link:hover .gallery__overlay span:after {
+			width: 100%;    
+		}
+
+		.gallery__image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(1.05);
+			transition: 
+				transform .5s,
+				filter .5s;
+		}
+
+		.gallery__link:hover .gallery__image {
+			transform: scale(1.2);
+			filter: blur(2px);
+		}
+
+		@media screen and (max-width: 40rem) {
+			.wrapper {
+				padding: 1rem;
+    			padding: 2rem;
+	    		margin: 0 auto;
+   				overflow-x: auto;
+			}
+
+			.gallery {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.gallery__item--1 {
+				grid-column: 1 / span 1;
+				grid-row: 1 / span 1;
+			}
+
+			.gallery__item--2 {
+				grid-column: 1 / span 1;
+				grid-row: 2 / span 1;
+			}
+
+			.gallery__item--3 {
+				grid-column: 2 / span 1;
+				grid-row: 1 / span 2;
+			}
+
+			.gallery__item--4 {
+				grid-column: 1 / span 1;
+				grid-row: 2 / span 2;
+			}
+
+			.gallery__item--5 {
+				grid-column: 2 / span 1;
+				grid-row: 3 / span 1;
+			}
+
+			.gallery__item--6 {
+				grid-column: 2 / span 1;
+				grid-row: 4 / span 1;
+			}
+
+			.gallery__overlay {
+				font-size: 1.25rem;
+			}
+		}
   </style>
 </head>
 
@@ -148,15 +301,15 @@
       <div class="header-content">
         <div class="logo">
           <a href="https://media.licdn.com/dms/image/C4D03AQEYaEc_Wvcs2w/profile-displayphoto-shrink_400_400/0/1621976755734?e=2147483647&v=beta&t=BS_eRHquIs1M4xkX9sXaSzqRbdrzv_lhtBW-y5Dvwes" target="_blank">
-            <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="30" align="left">
+            <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="50px" align="left">
           </a>
         </div>
         <div class="committees-link">
           <a href="comittees.html">Committees Section</a>
         </div>
         <div class="insta-link">
-          <a href="https://www.instagram.com" target="_blank">
-            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 20px;"> </a>
+          <a href="https://www.instagram.com"  target="_blank">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 30px;"> </a>
         </div>
       </div>
     </header>
@@ -165,22 +318,57 @@
     
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
     
-    <div class="gallery">
-      <div class="image">
-        <img src="https://live.staticflickr.com/65535/53009239148_916bf062c6_b.jpg" alt="Image 1">
-      </div>
-      <div class="image">
-        <img src="https://live.staticflickr.com/5332/8961839381_15ed8dc91f_b.jpg" alt="Image 2">
-      </div>
-      <div class="image">
-        <img src="https://i.vimeocdn.com/video/1622042479-f8013411b55fd240803802f91c43fcdf44046926c1ca126609348caed43726b6-d_640?f=webp" alt="Image 3">
-      </div>
-      <div class="image">
-        <img src="https://thumbs.dreamstime.com/b/united-nations-day-background-illustration-196780339.jpg" alt="Image 4">
-      </div>
-      <div class="image">
-        <img src="https://live.staticflickr.com/5332/8961839381_15ed8dc91f_b.jpg" alt="Image 5">
-      </div>
+    <div class="wrapper">
+        <div class="gallery">
+            <div class="gallery__item gallery__item--1">
+                <a href="#" class="gallery__link">
+                    <img src="file:///Users/Mavi_1/Downloads/club/32.png" class="gallery__image" height="100px"/>
+                    <div class="gallery__overlay">
+                        <span>Pose divertida</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--2">
+                <a href="#" class="gallery__link">
+                    <img src="file:///Users/Mavi_1/Downloads/Club%20de%20debate_29.jpg" height="100px" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Mesa Directiva</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--3">
+                <a href="#" class="gallery__link">
+                    <img src="file:///Users/Mavi_1/Downloads/Club%20de%20debate_30.jpg" height="100px" class="gallery__image"/>
+                    <div class="gallery__overlay">
+                        <span>Hola</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--4">
+                <a href="#" class="gallery__link">
+                    <img src="file:///Users/Mavi_1/Downloads/Club%20de%20debate_30.jpg" height="100px" class="gallery__image"/>
+                    <div class="gallery__overlay">
+                        <span>Club de debate</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--5">
+                <a href="#" class="gallery__link">
+                    <img src="file:///Users/Mavi_1/Downloads/Club%20de%20debate_31.jpg" height="100px" class="gallery__image"/>
+                    <div class="gallery__overlay">
+                        <span>Todos</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--6">
+                <a href="#" class="gallery__link">
+                    <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2021/09/busca-colegio-e1663704825568.png" height="100px" class="gallery__image"/>
+                    <div class="gallery__overlay">
+                        <span>Marymount</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
     <footer>
       <p1>&copy; 2024 MBS MUN Web Page. All rights reserved.</p1>
