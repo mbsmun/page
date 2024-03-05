@@ -7,6 +7,8 @@
   <title>dsada</title>
   <link rel="stylesheet" href="style.css">
   
+	
+	
   <style>
 	  
     .golden-line {
@@ -51,8 +53,11 @@
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
       font-weight: bold;
-	  padding-top: 50px;
-      font-size: 120px;
+	  padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+      font-size: 200px;
       text-align: center;
       background: linear-gradient(180deg, #ffd700, #ffd8e0);
       -webkit-background-clip: text;
@@ -65,6 +70,10 @@
       padding: 50px;
       font-size: 15pt;
       text-align:justify;
+      padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
      
       
       
@@ -94,6 +103,10 @@
       color: var(--text);
       font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
 	  font-size: 30px;
+	  padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
 	
 	  
     }
@@ -105,10 +118,24 @@
       background-color: var(--accent-light);
     }
 
+    .countdown-timer {
+            transform: scale(0.7);
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            display: inline-block; 
+	
+        
+    }
     .header-content {
       display: flex;
       justify-content: space-between;
       text-align: center;
+      padding-top: 0px;
+     padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     }
 
     .logo {
@@ -301,6 +328,11 @@
 			}
 		}
   </style>
+	
+	
+	
+	
+	
 </head>
 
 <body>
@@ -309,7 +341,7 @@
       <div class="header-content">
         <div class="logo">
           <a href="https://media.licdn.com/dms/image/C4D03AQEYaEc_Wvcs2w/profile-displayphoto-shrink_400_400/0/1621976755734?e=2147483647&v=beta&t=BS_eRHquIs1M4xkX9sXaSzqRbdrzv_lhtBW-y5Dvwes" target="_blank">
-            <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="50px" align="left">
+          <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="50px" align="left">
           </a>
         </div>
         <div class="committees-link">
@@ -322,41 +354,19 @@
       </div>
     </header>
     <div class="golden-line"></div>
-	
-	
-	<h5 id="demo">114d 5h 36m 44s</h5>
-
-	<script>
-	
-	var countDownDate = new Date("Jun 16, 2024, 5:00:00").getTime();
-
-	
-	var x = setInterval(function() {
-
-	
-	  var now = new Date().getTime();
-
-	  
-	  var distance = countDownDate - now;
-
-	  
-	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-	  
-	  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-	  + minutes + "m " + seconds + "s ";
-
-	  if (distance < 0) {
-		clearInterval(x);
-		document.getElementById("demo").innerHTML = "EXPIRED";
-	  }
-	}, 1000);
-	</script>
+		
 </div>
-    <h1>MBS MUN XII</h1>
+	
+	<h1>MBS MUN XII</h1>
+	<div class="counter"></div>
+    	<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+        <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Bogota" data-textcolor="#ffffff" data-date="2024-03-07 18:01" data-digitscolor="#ffffff" data-unitscolor="#ffffff"> .</a>
+    
+    
+	</div>
+</div>
+	
+	
     
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
     
@@ -418,3 +428,4 @@
 </body>
 
 </html>
+
