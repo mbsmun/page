@@ -21,8 +21,7 @@
         }
 
         header {
-            background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png");
-            background-size: 15%;
+            background-image:url("Marvel_Logo.svg.png");
             background-color: var(--dg);
             color:var(--bg);
             text-align: center;
@@ -40,8 +39,8 @@
 
         h1{
             text-align: center;
-            color: var(--bg);
-            margin-top: 150px;
+            color: var(--text);
+            margin-top: 50px;
             font-size: 48pt;
             font-family:"Protest Strike Regular";
         }
@@ -70,23 +69,66 @@
             background-color: var(--text);
             border-radius: 50%;
             border: 5px solid var(--text);
+            flex: 1;
+            margin: 20px;
+            
   
         }
+        .circulo2 {
+            width: 200px;
+            height: 200px;
+            background-color: var(--text);
+            border-radius: 50%;
+            border: 5px solid var(--text);
+            flex: 1;
+            margin: 20px;
+  
+        }
+        .shadow-box {
+            width: 800px;
+            height: 200px;
+            background-color: #1a1818c6;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+          }
         .container {
             display: flex;
             justify-content: center;
             align-items: center; 
         }
+        .moved-image {
+            position: relative;
+            right: -100px; /* move 50px from the left */
+        }
+        .moved-image2 {
+            position: relative;
+            left: -100px; /* move 50px from the left */
+        }
+        .container2 {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+       
 
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Nombre comité</h1>
         <div class="container">
-            <div class="circulo"></div>
-            </div>
+        <div class="shadow-box">
+            <h1>Nombre comité</h1>
+        </div>
+        </div>
     </header>
 
     <main>
@@ -94,18 +136,19 @@
            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis quod quaerat corporis laborum? Non rerum inventore fugiat dolores iusto cum aspernatur repellat. Suscipit, vero. Praesentium sunt, ea aperiam maiores facere, ab perferendis consequatur fuga alias inventore, nulla qui. Reprehenderit ducimus nesciunt ullam omnis. Sequi porro vel recusandae culpa! Enim expedita harum non magni. Nulla consectetur quia voluptate tempore, cum, dignissimos qui fugiat est fuga minus sed deserunt suscipit possimus at incidunt repellat? Alias labore cumque harum, quae, commodi incidunt optio quam voluptate magni necessitatibus in dolor. Enim beatae repudiandae voluptate, quibusdam, numquam ratione quod hic fugit possimus, neque ipsum? Et autem rem iure dolor, ad suscipit consectetur molestias ea, nihil reiciendis delectus non pariatur, in hic. Deserunt vitae eligendi quas nulla voluptate laudantium, quos aliquid deleniti perspiciatis voluptatibus in voluptatem omnis beatae nam praesentium obcaecati possimus quibusdam ut sit! Deleniti nam placeat distinctio illo ducimus officia accusantium expedita, aut adipisci officiis, assumenda quis cum recusandae. Ad et, ipsum, tempora earum tempore aut quos debitis, necessitatibus saepe exercitationem quas ratione repellat ex sed maxime incidunt distinctio dicta accusamus aperiam delectus cupiditate. Impedit perspiciatis facere quis quae voluptatibus veniam, quasi adipisci? Ut odio quasi exercitationem velit quas cupiditate quis fugit est cum deserunt totam vel ad provident omnis minus modi, laborum atque nisi culpa veritatis fugiat quia numquam? Ipsam optio sapiente deserunt veritatis quo, enim adipisci voluptates omnis obcaecati repudiandae debitis natus hic. Natus, eveniet. Mollitia molestias temporibus itaque, suscipit veniam dolorem reiciendis quae repudiandae? Architecto a quae eveniet unde quibusdam?</p>
         </section>
         <section>
+            <div class= "container">
+                <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
+                <img class="moved-image" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
+            </div>
+            
 
         </section>
     </main>
 
     <footer>
+        
         <p>&copy; 2024 MBS MUN Web Page. All rights reserved.</p>
     </footer>
 </body>
 
-</html>
-
-    <footer>
-    </footer>
-  </body>
 </html>
