@@ -6,6 +6,12 @@
     <title>About Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        :root {
+            --bg: #1B1B1B;
+            --text: #F9FBF2;
+            --lg: #09814A;
+            --dg:#2D4739;
+            }
         body {
             font-family: 'Arial', sans-serif;
             background-color: #1B1B1B;
@@ -14,7 +20,7 @@
         }
         header {
             background-color: #1E314E;
-            color: #fff;
+            color:#F9FBF2;
             padding: 20px 0;
             text-align: center;
         }
@@ -60,7 +66,7 @@
             text-align: center;
             padding: 30px;
             border-radius: 10px;
-            background-color: #fff;
+            background-color: #F9FBF2;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             margin: 20px;
@@ -85,7 +91,7 @@
         }
         footer {
             background-color: #333;
-            color: #fff;
+            color: #F9FBF2;
             text-align: center;
             padding: 20px 0;
         }
@@ -96,7 +102,7 @@
             margin-top: 20px;
         }
         .social-icons a {
-            color: #fff;
+            color: #F9FBF2;
             font-size: 1.5rem;
             margin: 0 10px;
             text-decoration: none;
@@ -104,69 +110,89 @@
         .social-icons a:hover {
             color: #ffd700;
         }
+        
+        .moved-image {
+            position: relative;
+            right: 675px; /* move 50px from the left */
+          }
+        .arrow {
+            width: 10px;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid #F9FBF2; /* Change color here */
+            display: inline-block;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px; /* Increased padding */
+            font-size: 24px; /* Increased font size */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px; /* Increased border radius */
+          }
+          
+        
+        
+
     </style>
 </head>
 <body>
 
 <header>
+    <div class="moved-image">
+        <a href="./comittees.html" onclick="history.go(-1); return false;" class="back-button">&#129092; Back </a>
+    </div>  
     <h1>About Us</h1>
 </header>
 <div class="container1">
     <div class="featuresh1">
         <div class="feature">
-            <h2>Our Team</h2>
-            <p>We have a team of highly skilled professionals who are passionate and dedicated to their work.</p>
+                <img class="moved-image2" src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?cs=srgb&dl=pexels-bas-masseus-1074535.jpg&fm=jpg" alt="photo" width= 600px>
         </div>
     </div>
 </div>
 <div class="container">
-    <p>Welcome to our company! We are dedicated to providing high-quality products and services to our customers. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor feugiat magna, ac consectetur metus auctor et. In hac habitasse platea dictumst. Aliquam sit amet suscipit lorem. Phasellus et augue quis risus vehicula ultricies. Proin tempor felis sit amet metus tincidunt commodo.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, non provident. Earum maiores cum vero, reiciendis, qui esse eveniet sunt nemo ex, enim nisi labore assumenda odit tempora a explicabo consequatur veniam facilis ipsam pariatur facere! Optio reiciendis illum a harum quia ab ex esse, totam fugiat nobis nostrum amet?</p>
     <div class="features">
         <div class="feature">
             <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
         <div class="feature">
-            <h2>Our Team</h2>
-            <p>We have a team of highly skilled professionals who are passionate and dedicated to their work.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
     </div>
     <div class="features"> 
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
     </div>
     <div class="features"> 
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
         <div class="feature">
-            <h2>Our Values</h2>
-            <p>Integrity, Innovation, Customer Satisfaction, and Excellence are at the core of everything we do.</p>
+            <img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
         </div>
 </div>
 
 <footer>
     <div class="container">
-        <p>&copy; 2024 Our Company. All Rights Reserved.</p>
+        <p>&copy; 2024 MBS MUN Web Page. All rights reserved.</p>
         <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/mbsmun?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
         </div>
@@ -175,3 +201,4 @@
 
 </body>
 </html>
+
