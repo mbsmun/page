@@ -6,6 +6,327 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dsada</title>
   <link rel="stylesheet" href="style.css">
+
+    <style>
+	  
+    .golden-line {
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(#ffd700, #ffd8 50%, transparent 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      
+    }
+	h5 {
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: #FFF3F3;
+	text-align:center;
+	align-items: center;
+	font-size: 30px;
+	padding-top:40px;
+	
+ }
+    :root {
+      --text: #ffffff;
+      --accent: #1e00ff;
+      --accent-light: #000dff;
+    }
+
+    body {
+      background-color: #1E314E;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	  
+      padding: 0px;
+      margin-top: 0px;
+      background-size: 20%;
+    }
+
+    header {
+      
+      color: var(--text);
+
+    }
+
+    h1 {
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+	  padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+      font-size: 200px;
+      text-align: center;
+      background: linear-gradient(180deg, #ffd700, #ffd8e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      padding: 50px;
+      font-size: 15pt;
+      text-align:justify;
+      padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+     
+      
+      
+    }
+
+    p1 {
+      color: #00FFFF;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    
+    p3 {
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      
+      
+      
+    }
+    footer {
+      text-align: center;
+      background-color: #002080;
+      color: var(--text);
+	   align-items: center;
+    }
+
+    a {
+      color: var(--text);
+      font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	  font-size: 30px;
+	  padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+	
+	  
+    }
+
+    h3 {
+      color: var(--text);
+      width: 100%;
+      padding: 15px;
+      background-color: var(--accent-light);
+    }
+
+    .countdown-timer {
+            transform: scale(0.7);
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            display: inline-block; 
+	
+        
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding-top: 0px;
+     padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+
+    .logo {
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .committees-link {
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    .insta-link {
+      text-align: right;
+    }
+
+      
+*,
+		*:before,
+		*:after {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+
+		.wrapper {
+			max-width: 75rem;
+			padding-top: 5rem;
+			margin: 0 auto;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(8, 12.5rem);
+			gap: .5rem;
+		}
+
+		.gallery__item--1 {
+			grid-column: 1 / span 1;
+			grid-row: 1 / span 1;
+		}
+
+		.gallery__item--2 {
+			grid-column: 1 / span 1;
+			grid-row: 2 / span 1;
+		}
+
+		.gallery__item--3 {
+			grid-column: 2 / span 1;
+			grid-row: 1 / span 2;
+		}
+
+		.gallery__item--4 {
+			grid-column: 3 / span 1;
+			grid-row: 1 / span 3;
+		}
+
+		.gallery__item--5 {
+			grid-column: 1 / span 2;
+			grid-row: 3 / span 2;
+		}
+
+		.gallery__item--6 {
+			grid-column: 3 / span 1;
+			grid-row: 4 / span 1;
+		}
+
+		.gallery__link {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.gallery__overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: rgba(0, 0, 0, 0.4);
+			font-size: 1.5rem;
+			color: #fff;
+			font-weight: 700;
+			text-transform: uppercase;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .2s;
+		}
+
+		.gallery__link:hover .gallery__overlay {
+			opacity: 1;
+		}
+
+		.gallery__overlay span {
+			position: relative;
+			line-height: 3rem;
+		}
+
+		.gallery__overlay span:before,
+		.gallery__overlay span:after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 0;
+			transition: width .3s ease-out .2s;
+		}
+
+		.gallery__overlay span:before {
+			top: 0;
+			left: 0;
+		}
+
+		.gallery__overlay span:after {
+			bottom: 0;
+			right: 0;
+		}
+
+		.gallery__link:hover .gallery__overlay span:before,
+		.gallery__link:hover .gallery__overlay span:after {
+			width: 100%;    
+		}
+
+		.gallery__image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(1.05);
+			transition: 
+				transform .5s,
+				filter .5s;
+		}
+
+		.gallery__link:hover .gallery__image {
+			transform: scale(1.2);
+			filter: blur(2px);
+		}
+
+		@media screen and (max-width: 40rem) {
+			.wrapper {
+				padding: 1rem;
+    			padding: 1rem;
+	    		margin: 0 auto;
+   				overflow-x: auto;
+			}
+
+			.gallery {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.gallery__item--1 {
+				grid-column: 1 / span 1;
+				grid-row: 1 / span 1;
+			}
+
+			.gallery__item--2 {
+				grid-column: 1 / span 1;
+				grid-row: 2 / span 1;
+			}
+
+			.gallery__item--3 {
+				grid-column: 2 / span 1;
+				grid-row: 1 / span 2;
+			}
+
+			.gallery__item--4 {
+				grid-column: 1 / span 1;
+				grid-row: 2 / span 2;
+			}
+
+			.gallery__item--5 {
+				grid-column: 2 / span 1;
+				grid-row: 3 / span 1;
+			}
+
+			.gallery__item--6 {
+				grid-column: 2 / span 1;
+				grid-row: 4 / span 1;
+			}
+
+			.gallery__overlay {
+				font-size: 1.25rem;
+			}
+		}
+  </style>
+	
 </head>
 
 <body>
