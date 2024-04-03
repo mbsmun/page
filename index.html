@@ -8,50 +8,41 @@
   <link rel="stylesheet" href="style.css">
 
     <style>
-	  
     .golden-line {
       width: 100%;
       height: 6px;
       background: linear-gradient(#ffd700, #ffd8 50%, transparent 50%);
       background-size: 200% 100%;
       background-position: right bottom;
-      
     }
-	h5 {
-	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-	color: #FFF3F3;
-	text-align:center;
-	align-items: center;
-	font-size: 30px;
-	padding-top:40px;
-	
- }
+    h5 {
+    font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    color: #FFF3F3;
+    text-align:center;
+    align-items: center;
+    font-size: 30px;
+    padding-top:40px;
+    }
     :root {
       --text: #ffffff;
       --accent: #1e00ff;
       --accent-light: #000dff;
     }
-
     body {
       background-color: #1E314E;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	  
       padding: 0px;
       margin-top: 0px;
       background-size: 20%;
     }
-
     header {
-      
       color: var(--text);
-
     }
-
     h1 {
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
       font-weight: bold;
-	  padding-top: 0px;
+      padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -61,7 +52,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     p {
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
@@ -72,59 +62,64 @@
     padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-     
-      
-      
     }
-
     p1 {
       color: #00FFFF;
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
     }
-    
     p3 {
       color: var(--text);
       font-family: 'Times New Roman', Times, serif;
-      
-      
-      
+    }
+    h2 {
+      text-align: center;
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      font-size:50px;
+    }
+    h6 {
+      text-align: center;
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px;
+      padding: 0px;
+      margin:0px;
+      position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; 
     }
     footer {
       text-align: center;
       background-color: #002080;
       color: var(--text);
-	   align-items: center;
+      align-items: center;
     }
-
     a {
       color: var(--text);
       font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-	  font-size: 30px;
-	  padding-top: 0px;
+      font-size: 30px;
+      padding-top: 0px;
             padding-bottom: 0px;
             margin-top: 0px;
             margin-bottom: 0px;
-	
-	  
     }
-
     h3 {
       color: var(--text);
       width: 100%;
       padding: 15px;
       background-color: var(--accent-light);
     }
-
     .countdown-timer {
-            transform: scale(0.7);
+            transform: scale(0.5);
             padding-top: 0px;
             padding-bottom: 0px;
             margin-top: 0px;
             margin-bottom: 0px;
             display: inline-block; 
-	
-        
+            position: relative;
     }
     .header-content {
       display: flex;
@@ -135,199 +130,55 @@
     margin-top: 0px;
     margin-bottom: 0px;
     }
-
     .logo {
       margin-right: auto;
       text-align: center;
     }
-
     .committees-link {
       text-align: right;
       padding-right: 20px;
     }
-
     .insta-link {
       text-align: right;
     }
-
-      
-*,
-		*:before,
-		*:after {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-
-		.wrapper {
-			max-width: 75rem;
-			padding-top: 5rem;
-			margin: 0 auto;
-		}
-
-		.gallery {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(8, 12.5rem);
-			gap: .5rem;
-		}
-
-		.gallery__item--1 {
-			grid-column: 1 / span 1;
-			grid-row: 1 / span 1;
-		}
-
-		.gallery__item--2 {
-			grid-column: 1 / span 1;
-			grid-row: 2 / span 1;
-		}
-
-		.gallery__item--3 {
-			grid-column: 2 / span 1;
-			grid-row: 1 / span 2;
-		}
-
-		.gallery__item--4 {
-			grid-column: 3 / span 1;
-			grid-row: 1 / span 3;
-		}
-
-		.gallery__item--5 {
-			grid-column: 1 / span 2;
-			grid-row: 3 / span 2;
-		}
-
-		.gallery__item--6 {
-			grid-column: 3 / span 1;
-			grid-row: 4 / span 1;
-		}
-
-		.gallery__link {
-			position: relative;
-			display: block;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		.gallery__overlay {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			background: rgba(0, 0, 0, 0.4);
-			font-size: 1.5rem;
-			color: #fff;
-			font-weight: 700;
-			text-transform: uppercase;
-			opacity: 0;
-			pointer-events: none;
-			transition: opacity .2s;
-		}
-
-		.gallery__link:hover .gallery__overlay {
-			opacity: 1;
-		}
-
-		.gallery__overlay span {
-			position: relative;
-			line-height: 3rem;
-		}
-
-		.gallery__overlay span:before,
-		.gallery__overlay span:after {
-			content: '';
-			position: absolute;
-			height: 2px;
-			width: 0;
-			transition: width .3s ease-out .2s;
-		}
-
-		.gallery__overlay span:before {
-			top: 0;
-			left: 0;
-		}
-
-		.gallery__overlay span:after {
-			bottom: 0;
-			right: 0;
-		}
-
-		.gallery__link:hover .gallery__overlay span:before,
-		.gallery__link:hover .gallery__overlay span:after {
-			width: 100%;    
-		}
-
-		.gallery__image {
-		  width: 100%;
-		  height: 100%;
-		  object-fit: cover;
-		  transform: scale(1.05);
-		  transition: transform .5s;
-		}
-
-		.gallery__link:hover .gallery__image {
-			transform: scale(1.2);
-			filter: blur(2px);
-		}
-
-		@media screen and (max-width: 40rem) {
-			.wrapper {
-				padding: 1rem;
-    			padding: 1rem;
-	    		margin: 0 auto;
-   				overflow-x: auto;
-			}
-
-			.gallery {
-				grid-template-columns: repeat(2, 1fr);
-			}
-
-			.gallery__item--1 {
-				grid-column: 1 / span 1;
-				grid-row: 1 / span 1;
-			}
-
-			.gallery__item--2 {
-				grid-column: 1 / span 1;
-				grid-row: 2 / span 1;
-			}
-
-			.gallery__item--3 {
-				grid-column: 2 / span 1;
-				grid-row: 1 / span 2;
-			}
-
-			.gallery__item--4 {
-				grid-column: 1 / span 1;
-				grid-row: 2 / span 2;
-			}
-
-			.gallery__item--5 {
-				grid-column: 2 / span 1;
-				grid-row: 3 / span 1;
-			}
-
-			.gallery__item--6 {
-				grid-column: 2 / span 1;
-				grid-row: 4 / span 1;
-			}
-
-			.gallery__overlay {
-				font-size: 1.25rem;
-			}
-		}
-  </style>
-	
+    .wrapper {
+  max-width: 100%;
+  padding-top: 5rem;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.gallery {
+  display: inline-flex;
+  gap: 30px;
+  background-color: white;
+  padding-top:30px;
+  padding-bottom:10px;
+  margin-top: -99px;
+  width:115%;
+}
+.gallery__item {
+  flex: 0 0 auto;
+  width: 300px;
+}
+.gallery__link {
+  display: block;
+  overflow: hidden;
+}
+.gallery__image {
+ width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery__link:hover .gallery__image {
+  transform: scale(1.3);
+}
+    </style>
 </head>
 
 <body>
+    <br>
   <div class="top-section">
     <header>
       <div class="header-content">
@@ -337,10 +188,10 @@
           </a>
         </div>
         <div class="committees-link">
-          <a href="comittees.html">Committees Section</a>
+          <a href="comittees.html">Sección de Comités</a>
         </div>
         <div class="insta-link">
-          <a href="https://www.instagram.com" target="_blank">
+          <a href="https://www.instagram.com/mbsmun/" target="_blank">
             <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 30px;"> </a>
         </div>
       </div>
@@ -350,49 +201,58 @@
 
   <h1>MBS MUN XII</h1>
   <div class="counter"></div>
-  <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+ 
+
+  <h2>Bienvenidos a la duodécima edición de MBSMUN XII</h2>
+  
+  <p>Si estás leyendo esto, significa que eres solo una pequeña parte de este mundo que nos rodea. Puede sonar como si fuera poco, pero en el transcurso del modelo lograrás darte cuenta de que, aún siendo solo un individuo, se pueden hacer grandes cambios dentro de nuestra sociedad. Afrontarás retos internacionales de hoy en día, mundos ficticios, acontecimientos del pasado y grandes desafíos del futuro; con el objetivo de generar soluciones mediante un ambiente de aprendizaje, construcción y conjunción de distintos puntos de vista. Este año como junta nos vimos enfrentados al reto de crear un modelo que no solo permitiera una gran exigencia intelectual y de oratoria, sino que también sea memorable y divertido para todos los delegados. Se puede decir con certeza que este modelo fue hecho por estudiantes para estudiantes.<br> <br>
+
+Atentamente,<br>
+Junta Directiva MBSMUN XII <br> <br></p>
+
+<h6>Tiempo que falta para el MBSMUN XII</h6>
+ 
+<script src="https://cdn.logwork.com/widget/countdown.js"></script>
   <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Bogota" data-textcolor="#ffffff" data-date="2024-06-03 18:01" data-digitscolor="#ffffff" data-unitscolor="#ffffff">.</a>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-
+  
   <div class="wrapper">
-    <div class="gallery">
-      <div class="gallery__item gallery__item--1">
-        <a href="https://imgur.com/GzHS98U" class="gallery__link">
-          <img src="https://i.imgur.com/GzHS98U.jpg" class="gallery__image">
-        </a>
-      </div>
-      <div class="gallery__item gallery__item--2">
-        <a href="https://imgur.com/6izgsFB" class="gallery__link">
-          <img src="https://i.imgur.com/6izgsFB.jpg" class="gallery__image">
-        </a>
-      </div>
-      <div class="gallery__item gallery__item--3">
-        <a href="https://imgur.com/0LbBRf3" class="gallery__link">
-          <img src="https://i.imgur.com/0LbBRf3.jpg" class="gallery__image">
-        </a>
-      </div>
-      <div class="gallery__item gallery__item--4">
-        <a href="https://imgur.com/AJsbNq0" class="gallery__link">
-          <img src="https://i.imgur.com/AJsbNq0.jpg" class="gallery__image">
-        </a>
-      </div>
-      <div class="gallery__item gallery__item--5">
-        <a href="https://imgur.com/yCgJtei" class="gallery__link">
-          <img src="https://i.imgur.com/yCgJtei.jpg" class="gallery__image">
-        </a>
-      </div>
+  <div class="gallery">
+    <div class="gallery__item">
+      <a href="https://imgur.com/GzHS98U" class="gallery__link">
+        <img src="https://i.imgur.com/GzHS98U.jpg" class="gallery__image">
+      </a>
+    </div>
+    <div class="gallery__item">
+      <a href="https://imgur.com/6izgsFB" class="gallery__link">
+        <img src="https://i.imgur.com/6izgsFB.jpg" class="gallery__image">
+      </a>
+    </div>
+    <div class="gallery__item">
+      <a href="https://imgur.com/0LbBRf3" class="gallery__link">
+        <img src="https://i.imgur.com/0LbBRf3.jpg" class="gallery__image">
+      </a>
+    </div>
+    <div class="gallery__item">
+      <a href="https://imgur.com/AJsbNq0" class="gallery__link">
+        <img src="https://i.imgur.com/AJsbNq0.jpg" class="gallery__image">
+      </a>
+    </div>
+    <div class="gallery__item">
+      <a href="https://imgur.com/yCgJtei" class="gallery__link">
+        <img src="https://i.imgur.com/yCgJtei.jpg" class="gallery__image">
+      </a>
     </div>
   </div>
+</div>
+<br>
+  <footer>
+      <p1>&copy; 2024 MBS MUN Web Page. All rights reserved.</p1>
+    </footer>
 
 </body>
 
 </html>
 
-
- 
-
-</html>
 
 </html>
 
