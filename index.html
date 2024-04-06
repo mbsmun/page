@@ -1,286 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>dsada</title>
-  <link rel="stylesheet" href="style.css">
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MBS MUN XII</title>
+    <link rel="stylesheet" href="style.css">
     <style>
+      @media only screen and (max-device-width: 480px) {
+        div#wrapper {
+          width: 400px;
+        }
 
-   @media only screen and (max-device-width: 480px) {
-    div#wrapper {
-        width: 400px;
-    }
+        div#header {
+          background-image: url(media-queries-phone.jpg);
+          height: 93px;
+          position: relative;
+        }
 
-    div#header {
-        background-image: url(media-queries-phone.jpg);
-        height: 93px;
-        position: relative;
-    }
+        div#header h1 {
+          font-size: 140%;
+        }
 
-    div#header h1 {
-        font-size: 140%;
-    }
+        #content {
+          float: none;
+          width: 100%;
+        }
 
-    #content {
-        float: none;
+        #navigation {
+          float: none;
+          width: auto;
+        }
+      }
+
+      .golden-line {
         width: 100%;
-    }
+        height: 0.6vw;
+        background: linear-gradient(#ffd700, #ffd8e0 50%, transparent 50%);
+      }
 
-    #navigation {
-        float:none;
+      h5 {
+        font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        color: #FFF3F3;
+        text-align: center;
+        align-items: center;
+        font-size: 30px;
+        padding-top: 40px;
+      }
+
+      :root {
+        --text: #ffffff;
+        --accent: #1e00ff;
+        --accent-light: #000dff;
+      }
+
+      body {
+        background-color: #1E314E;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 0.7vw;
+        background-size: 20%;
+      }
+
+      header {
+        color: var(--text);
+        height: 4.3vw;
         width: auto;
-    }
-}
+      }
 
-    .golden-line {
-      width: 100%;
-      height: 0.4vw;
-      background: linear-gradient(#ffd700, #ffd8 50%, transparent 50%);
-      background-size: 200% 100%;
-      background-position: right bottom;
-    }
-    h5 {
-    font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-    color: #FFF3F3;
-    text-align:center;
-    align-items: center;
-    font-size: 30px;
-    padding-top:40px;
-    }
-    :root {
-      --text: #ffffff;
-      --accent: #1e00ff;
-      --accent-light: #000dff;
-    }
-    body {
-      background-color: #1E314E;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      padding: 0.5vw;
-      margin: 0.5vw;
-      background-size: 20%;
-    }
-    header {
-      color: var(--text);
-      height: 10.5vw;
-      width: auto;
-     
-    }
-    h1 {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bold;
-      padding-top: 40px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  font-size: 10vw; 
-  text-align: center; 
-  color: #333;
-      text-align: center;
-      background: linear-gradient(180deg, #ffd700, #ffd8e0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    p {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      padding: 3vw;
-      font-size: 2.3vw;
-      text-align:justify;
-      padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
-    p1 {
-      color: #FFFFFF;
-      text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 2vw;
-    }
-    p3 {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-    }
-    h2 {
-      
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      text-align:center;
-      font-size:2.5vw;
-      padding-top: 5vw;
-    }
-    h6 {
-      text-align: center;
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 2vw;
-      
- 
-    }
-    footer {
-      text-align: center;
-      background-color: #000000;
-      align-items: center;
-      font-size: 4vw;
-      color: #FFFFFF;
-    }
+      h1 {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 8vw;
+        text-align: center;
+        text-align: center;
+        background: linear-gradient(180deg, #ffd700, #ffd8e0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      p {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        padding: 8vw;
+        font-size: 1.9vw;
+        text-align: justify;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      p1 {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5vw;
+      }
+
+      p3 {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        font-size: 2vw;
+        padding-top: 1vw;
+        padding-bottom: 1.7vw;
+      }
+
+      h6 {
+        text-align: center;
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5vw;
+        margin-top: 0px;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #000000;
+        font-size: 2vw;
+        color: #FFFFFF;
+      }
+
+      a {
+        color: var(--text);
+        font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        font-size: 2.3vw;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      h3 {
+        color: var(--text);
+        width: 100%;
+        padding: 15px;
+        background-color: var(--accent-light);
+      }
+
+      .countdown-timer {
+        transform: scale(0.5);
+        display: inline-block;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .logo {
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .committees-link {
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      .insta-link {
+        text-align: right;
+      }
+
+      .wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .gallery {
+        display: inline-flex;
+        gap: 0;
+        width: 100%;
+        margin:0;
+        padding:0;
     
-    a {
-      color: var(--text);
-      font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-      font-size: 2.3vw;
-      padding-top: 0px;
-            padding-bottom: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-    }
-    h3 {
-      color: var(--text);
-      width: 100%;
-      padding: 15px;
-      background-color: var(--accent-light);
-    }
-    .countdown-timer {
-            transform: scale(0.5);
-            display: inline-block; 
+      }
 
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-      padding-top: 0px;
-     padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
-    .logo {
-      margin-right: auto;
-      text-align: center;
-      
+      .gallery__item {
+        flex: 0 0 auto;
+        width: 35vw;
+      }
 
-    }
-    .committees-link {
-      text-align: right;
-      padding-right: 20px;
-      
-     
-    }
-    .insta-link {
-      text-align: right;
-      
-    }
-    .wrapper {
-  max-width: 90%;
-  padding-top: 5rem;
-  margin: 0 auto;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.gallery {
-  display: inline-flex;
-  gap: 3vw;
-  padding-bottom:10px;
-  
-  width:100%;
-}
-.gallery__item {
-  flex: 0 0 auto;
-  
-  width: 35vw;
-}
-.gallery__link {
-  display: block;
-  overflow: hidden;
-}
-.gallery__image {
- width: 35vw;
-  height: 20vw;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-.gallery__link:hover .gallery__image {
-  transform: scale(1.3);
-}
+      .gallery__link {
+        display: block;
+        overflow: hidden;
+      }
+
+      .gallery__image {
+        width: 35vw;
+        height: 20vw;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .gallery__item:hover .gallery__image {
+        transform: scale(1.1);
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <br>
-  <div class="top-section">
-    <header>
-      <div class="header-content">
-        <div class="logo">
-          <a href="https://media.licdn.com/dms/image/C4D03AQEYaEc_Wvcs2w/profile-displayphoto-shrink_400_400/0/1621976755734?e=2147483647&v=beta&t=BS_eRHquIs1M4xkX9sXaSzqRbdrzv_lhtBW-y5Dvwes" target="_blank">
-            <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="15vw" align="left">
-          </a>
+    <div class="top-section">
+      <header>
+        <div class="header-content">
+          <div class="logo">
+            <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="50vw" align="left">
+          </div>
+          <div class="committees-link">
+            <a href="comittees.html"> Comittees</a>
+          </div>
+          <div class="insta-link">
+            <a href="https://www.instagram.com/mbsmun/" target="_blank">
+              <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 3vw;">
+            </a>
+          </div>
         </div>
-        <div class="committees-link">
-          <a href="comittees.html" > Sección de Comités</a>
+      </header>
+      <div class="golden-line"></div>
+    </div>
+    <h1>MBS MUN XII</h1>
+    <div class="counter"></div>
+    <h2>Bienvenidos a la duodécima edición de MBSMUN XII</h2>
+    <p>Si estás leyendo esto, significa que eres solo una pequeña parte de este mundo que nos rodea. Puede sonar como si fuera poco, pero en el transcurso del modelo lograrás darte cuenta de que, aún siendo solo un individuo, se pueden hacer grandes cambios dentro de nuestra sociedad. Afrontarás retos internacionales de hoy en día, mundos ficticios, acontecimientos del pasado y grandes desafíos del futuro; con el objetivo de generar soluciones mediante un ambiente de aprendizaje, construcción y conjunción de distintos puntos de vista. Este año como junta nos vimos enfrentados al reto de crear un modelo que no solo permitiera una gran exigencia intelectual y de oratoria, sino que también sea memorable y divertido para todos los delegados. Se puede decir con certeza que este modelo fue hecho por estudiantes para estudiantes. <br>
+      <br> Atentamente, <br> Junta Directiva MBSMUN XII <br>
+      <br>
+    </p>
+    <h6>Tiempo que falta para el MBSMUN XII</h6>
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+    <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Bogota" data-textcolor="#ffffff" data-date="2024-06-03 18:01" data-digitscolor="#ffffff" data-unitscolor="#ffffff">.</a>
+
+    <div class="wrapper">
+      <div class="gallery">
+        <div class="gallery__item">
+          <img src="https://i.imgur.com/GzHS98U.jpg" class="gallery__image">
         </div>
-        <div class="insta-link">
-          <a href="https://www.instagram.com/mbsmun/" target="_blank">
-            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 3vw;"> </a>
+        <div class="gallery__item">
+          <img src="https://i.imgur.com/6izgsFB.jpg" class="gallery__image">
+        </div>
+        <div class="gallery__item">
+          <img src="https://i.imgur.com/0LbBRf3.jpg" class="gallery__image">
+        </div>
+        <div class="gallery__item">
+          <img src="https://i.imgur.com/AJsbNq0.jpg" class="gallery__image">
+        </div>
+        <div class="gallery__item">
+          <img src="https://i.imgur.com/yCgJtei.jpg" class="gallery__image">
         </div>
       </div>
-    </header>
-    <div class="golden-line"></div>
-  </div>
-
-  <h1>MBS MUN XII</h1>
-  <div class="counter"></div>
- 
-
-  <h2>Bienvenidos a la duodécima edición de MBSMUN XII</h2>
-  
-  <p>Si estás leyendo esto, significa que eres solo una pequeña parte de este mundo que nos rodea. Puede sonar como si fuera poco, pero en el transcurso del modelo lograrás darte cuenta de que, aún siendo solo un individuo, se pueden hacer grandes cambios dentro de nuestra sociedad. Afrontarás retos internacionales de hoy en día, mundos ficticios, acontecimientos del pasado y grandes desafíos del futuro; con el objetivo de generar soluciones mediante un ambiente de aprendizaje, construcción y conjunción de distintos puntos de vista. Este año como junta nos vimos enfrentados al reto de crear un modelo que no solo permitiera una gran exigencia intelectual y de oratoria, sino que también sea memorable y divertido para todos los delegados. Se puede decir con certeza que este modelo fue hecho por estudiantes para estudiantes.<br> <br>
-
-Atentamente,<br>
-Junta Directiva MBSMUN XII <br> <br></p>
-
-<h6>Tiempo que falta para el MBSMUN XII</h6>
- 
-<script src="https://cdn.logwork.com/widget/countdown.js"></script>
-  <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Bogota" data-textcolor="#ffffff" data-date="2024-06-03 18:01" data-digitscolor="#ffffff" data-unitscolor="#ffffff">.</a>
-  
-  <div class="wrapper">
-  <div class="gallery">
-    <div class="gallery__item">
-      
-        <img src="https://i.imgur.com/GzHS98U.jpg" class="gallery__image">
-      
     </div>
-    <div class="gallery__item">
-     
-        <img src="https://i.imgur.com/6izgsFB.jpg" class="gallery__image">
-     
-    </div>
-    <div class="gallery__item">
-      
-        <img src="https://i.imgur.com/0LbBRf3.jpg" class="gallery__image">
-      
-    </div>
-    <div class="gallery__item">
-      
-        <img src="https://i.imgur.com/AJsbNq0.jpg" class="gallery__image">
-     
-    </div>
-    <div class="gallery__item">
-        <img src="https://i.imgur.com/yCgJtei.jpg" class="gallery__image">
-    </div>
-  </div>
-</div>
-<br>
-  <footer>
+    <br>
+    <footer>
       <p1>&copy; 2024 MBS MUN Web Page. All rights reserved.</p1>
     </footer>
-
-</body>
-
+  </body>
 </html>
 
 
