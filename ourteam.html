@@ -19,7 +19,7 @@
             padding: 0;
         }
         header {
-            background-color: #1E314E;
+            background-color: #121212;
             color:#F9FBF2;
             padding: 20px 0;
             text-align: center;
@@ -148,6 +148,7 @@
           }
         @media (max-width: 1000px) {
             .feature {
+                left: 5%;
                 width: 90%;
                 display: flex;
                 position:relative;
@@ -167,6 +168,7 @@
             }
             .feature1{
                 width: 90%;
+                left: 5%;
                 display: flex;
                 position:relative;
                 margin: 0 0.4vw;
@@ -198,12 +200,16 @@
               .back-button {
                 display: inline-block;
                 padding: 10px 20px; /* Increased padding */
-                font-size: 20px; /* Increased font size */
                 color: #fff;
                 text-decoration: none;
                 border-radius: 10px; /* Increased border radius */
               }
-           }
+              .icon {
+                font-size: 20px;
+            }
+            }
+        
+           
           
         
         
@@ -214,7 +220,7 @@
 
 <header>
     <div class="moved-image">
-        <a href="./" onclick="history.go(-1); return false;" class="back-button">&#129092; </a>
+        <a href="./" onclick="history.go(-1); return false;" class="back-button"><span class="icon">&#8592;</span> </a>
     </div>  
     <h1>Our Team</h1>
 </header>
@@ -270,4 +276,3 @@
 
 </body>
 </html>
-
