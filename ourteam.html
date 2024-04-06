@@ -126,10 +126,6 @@
             left: 1%; /* move 50px from the left */
             top: 1%
           }
-        .moved-image2 {
-            position: absolute;
-            left: 1%; /* move 50px from the left */
-          }
         .arrow {
             width: 10px;
             height: 0;
@@ -194,6 +190,19 @@
                 margin: 0 auto;
                 padding: 20px;
             }
+            .moved-image {
+                position: absolute;
+                left: 2%; /* move 50px from the left */
+                top: 1%
+              }
+              .back-button {
+                display: inline-block;
+                padding: 10px 20px; /* Increased padding */
+                font-size: 20px; /* Increased font size */
+                color: #fff;
+                text-decoration: none;
+                border-radius: 10px; /* Increased border radius */
+              }
            }
           
         
@@ -205,7 +214,7 @@
 
 <header>
     <div class="moved-image">
-        <a href="./" onclick="history.go(-1); return false;" class="back-button">&#129092; Back </a>
+        <a href="./" onclick="history.go(-1); return false;" class="back-button">&#129092; </a>
     </div>  
     <h1>Our Team</h1>
 </header>
@@ -261,3 +270,4 @@
 
 </body>
 </html>
+
