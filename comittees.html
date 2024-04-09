@@ -434,6 +434,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         function checkFilt(){
             let elems = document.getElementById("elements").children
             for (let i = 0; i<elems.length; i++){
+                if (elems[i].id == "footer") continue
                 cont = false
                 let _temp = filterChosen.values()
                 for (let n = 0; n<filterChosen.size; n++){
