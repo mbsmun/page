@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* clears the ‘X’ from Chrome */
+        /* clears the â€˜Xâ€™ from Chrome */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -24,7 +24,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             overflow: hidden;
             background-color: var(--bg);
             color: var(--text);
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: serif;
         }
 
         #searchbar {
@@ -122,7 +122,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
         #elements > div {
             width: 32%;
-            aspect-ratio: 16/9;
+            aspect-ratio: 1/1;
             display: inline-block;
             background-color: var(--dg);
             margin: 0 0.4vw;
@@ -142,8 +142,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             width: 100%;
             height: 100%;
             opacity: 0.6;
-            background-image: url(https://i.ytimg.com/vi/cQCSW9y1k2M/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC53Hw3FniO0yzNgctWVujN2_r6OQ);
-            background-size: contain;
+            background-size: cover;
         }
 
         #elements span {
@@ -170,19 +169,20 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             background-color: var(--dg);
         }
 
-        header h1 {
+        header img {
             margin: 0;
-            width: 50%;
-            display: inline-block;
             height: 100%;
+            display: inline-block;
         }
 
         header nav {
-            width: 49%;
+            width: 20%;
             text-align: right;
-            display: inline-block;
             margin: 0;
             border-radius: 1000px;
+            position: absolute;
+            top: 2.5%;
+            right: 1%;
         }
 
         @media (max-width: 1000px){
@@ -222,7 +222,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                 width: 70%;
                 font-size: 4vw;
             }
-            header h1 {
+            header img {
                 position: absolute;
                 top:-100%;
             }
@@ -278,17 +278,62 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             height: 5%;
             position:absolute;
         }
+
+        #fifa::before{
+            background-image: url("POSTERS/fifa.jpeg");
+        }
+#sponge_bob::before{
+            background-image: url("POSTERS/sponge-bob.jpeg");
+        }
+#unoosa::before{
+            background-image: url("POSTERS/unoosa.png");
+        }
+#hrw::before{
+            background-image: url("POSTERS/hrw.jpg");
+        }
+#acnur::before{
+            background-image: url("POSTERS/acnur.png");
+        }
+#sochum::before{
+            background-image: url("POSTERS/sochum.jpg");
+        }
+#star_wars::before{
+            background-image: url("POSTERS/star-wars.jpg");
+        }
+#comite_historico::before{
+            background-image: url("POSTERS/comite-historico.jpg");
+        }
+#iaea::before{
+            background-image: url("POSTERS/iaea.jpg");
+        }
+#security_council::before{
+            background-image: url("POSTERS/security-council.jpeg");
+        }
+#marvel::before{
+            background-image: url("POSTERS/marvel.jpg");
+        }
+#who::before{
+            background-image: url("POSTERS/who.png");
+        }
+#crisis_colombia::before{
+            background-image: url("POSTERS/crisis-colombia.jpg");
+        }
+#unodc::before{
+            background-image: url("POSTERS/unodc.jpeg");
+        }
+#onu_femmes::before{
+            background-image: url("POSTERS/onu-femmes.png");
+        }
+
     </style>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>
-            MBSMUN
-        </h1>
+        <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" alt="" srcset="">
         <nav>
-            <a href="./">home</a>
-            <a href="./ourteam.html">About</a>
+            <a href="../">Home</a>
+            <a href="ourteam.html">Our Team</a>
         </nav>
     </header>
     <div id="searchbar">
@@ -305,34 +350,67 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     </div>
     <div id="elements" style="top:-20%; height: 90%">
 
-        <div class="Fun Committee CrisisManagement GlobalIssues">
-            <H1 class="title">Comite</H1>
-            <p></p>
-            </div>
-        
-        <div class="Exciting Committee Technology SpaceExploration">
-            <H1 class="title">ISC</H1>
+        <div class="JUNIOR ESPAÑOL" id="fifa">
+            <H1 class="title">FIFA</H1>
             <p></p>
         </div>
-        
-        <div class="Challenging Committee Healthcare Epidemics">
-            <H1 class="title">GHE</H1>
+<div class="JUNIOR ENGLISH" id="sponge_bob">
+            <H1 class="title">SPONGE BOB</H1>
             <p></p>
-         </div>
-         <div class="Fun Committee CrisisManagement GlobalIssues">
-             <H1 class="title">Comite</H1>
-             <p></p>
-             </div>
-         
-         <div class="Exciting Committee Technology SpaceExploration">
-             <H1 class="title">ISC</H1>
-             <p></p>
-         </div>
-         
-         <div class="Challenging Committee Healthcare Epidemics">
-             <H1 class="title">GHE</H1>
-             <p></p>
-          </div>
+        </div>
+<div class="JUNIOR ENGLISH UNITED NATIONS" id="unoosa">
+            <H1 class="title">UNOOSA</H1>
+            <p></p>
+        </div>
+<div class="JUNIOR ENGLISH" id="hrw">
+            <H1 class="title">HRW</H1>
+            <p></p>
+        </div>
+<div class="JUNIOR ESPAÑOL UNITED NATIONS" id="acnur">
+            <H1 class="title">ACNUR</H1>
+            <p></p>
+        </div>
+<div class="INTERMEDIO ESPAÑOL UNITED NATIONS" id="sochum">
+            <H1 class="title">SOCHUM</H1>
+            <p></p>
+        </div>
+<div class="INTERMEDIO ESPAÑOL CRISIS" id="star_wars">
+            <H1 class="title">STAR WARS</H1>
+            <p></p>
+        </div>
+<div class="INTERMEDIO ESPAÑOL CRISIS" id="comite_historico">
+            <H1 class="title">COMITÉ HISTÓRICO</H1>
+            <p></p>
+        </div>
+<div class="INTERMEDIATE ENGLISH UNITED NATIONS" id="iaea">
+            <H1 class="title">IAEA</H1>
+            <p></p>
+        </div>
+<div class="INTERMEDIATE ENGLISH UNITED NATIONS" id="security_council">
+            <H1 class="title">SECURITY COUNCIL</H1>
+            <p></p>
+        </div>
+<div class="SENIOR ENGLISH CRISIS" id="marvel">
+            <H1 class="title">MARVEL</H1>
+            <p></p>
+        </div>
+<div class="SENIOR ENGLISH UNITED NATIONS" id="who">
+            <H1 class="title">WHO</H1>
+            <p></p>
+        </div>
+<div class="SENIOR ESPAÑOL CRISIS" id="crisis_colombia">
+            <H1 class="title">CRISIS COLOMBIA</H1>
+            <p></p>
+        </div>
+<div class="SENIOR ESPAÑOL UNITED NATIONS" id="unodc">
+            <H1 class="title">UNODC</H1>
+            <p></p>
+        </div>
+<div class="SENIOR FRANÇAIS UNITED NATIONS" id="onu_femmes">
+            <H1 class="title">ONU FEMMES</H1>
+            <p></p>
+        </div>
+
         <p id="footer">&copy; 2024 MBS MUN Web Page. All rights reserved.</p>
     </div>
     <script>
@@ -377,6 +455,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                 }
             }
         }
+        function removeAccents(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
         filters = new Set()
         let elems = document.getElementById("elements").children
         for (let i = 0; i<elems.length; i++){
@@ -386,7 +467,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                 continue;
             }
             elems[i].onclick = ()=>{
-                window.location = elems[i].getElementsByClassName("title")[0].innerText.toLowerCase() + ".html"
+                window.open(removeAccents(elems[i].getElementsByClassName("title")[0].innerText.toLowerCase().replaceAll(" ", "-")) + ".html")
             }
             for (let n = 0; n<elems[i].classList.length; n++){
                 filters.add(elems[i].classList[n])
