@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team</title>
+    <link rel="icon" href="LOGO.png" sizes="192x192">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         :root {
@@ -32,6 +33,7 @@
             max-width: 100%;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
         .container1{
             max-width: 50%;
@@ -122,25 +124,20 @@
         }
         
         .moved-image {
-            position: absolute;
-            left: 1%; /* move 50px from the left */
-            top: 1%
+            position: relative;
+            right: 45%; /* move 50px from the left */
+            top: 1%;
           }
-        .arrow {
-            width: 10px;
-            height: 0;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-right: 20px solid #F9FBF2; /* Change color here */
-            display: inline-block;
-        }
         .back-button {
+            position: absolute;
             display: inline-block;
             padding: 10px 20px; /* Increased padding */
             font-size: 24px; /* Increased font size */
             color: #fff;
             text-decoration: none;
             border-radius: 10px; /* Increased border radius */
+            transition: transform 0.3s ease;
+
           }
         .responsive-image{
             width: 100%;
@@ -148,7 +145,7 @@
           }
         @media (max-width: 1000px) {
             .feature {
-                left: -1%;
+                left: 5%;
                 width: 90%;
                 display: flex;
                 position:relative;
@@ -168,7 +165,7 @@
             }
             .feature1{
                 width: 90%;
-                left: -1%;
+                left: 5%;
                 display: flex;
                 position:relative;
                 margin: 0 0.4vw;
@@ -195,7 +192,8 @@
             .moved-image {
                 position: absolute;
                 left: 2%; /* move 50px from the left */
-                top: 1%
+                top: 1%;
+                transition: transform 0.3s ease;
               }
               .back-button {
                 display: inline-block;
@@ -203,9 +201,11 @@
                 color: #fff;
                 text-decoration: none;
                 border-radius: 10px; /* Increased border radius */
+                
               }
               .icon {
                 font-size: 20px;
+                transition: transform 0.3s ease;
             }
             }
         
@@ -220,9 +220,9 @@
 
 <header>
     <div class="moved-image">
-        <a href="./" onclick="history.go(-1); return false;" class="back-button"><span class="icon">&#8592;</span> </a>
+        <a href="./"  class="back-button">&#8592; Back</a>
     </div>  
-    <h1>Our Team</h1>
+    <h1>Our Team</h1><link rel="icon" href="LOGO.png" sizes="192x192">
 </header>
 <div class="container1">
     <div class="feature1">
