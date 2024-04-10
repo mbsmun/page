@@ -12,31 +12,54 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
-    @media only screen and (max-device-width: 480px) {
-      div#wrapper {
-        width: 400px;
-      }
+    @media only screen and (max-width: 480px) {
+  div#wrapper {
+    width: 400px;
+  }
 
-      div#header {
-        background-image: url(media-queries-phone.jpg);
-        height: 93px;
-        position: relative;
-      }
+  div#header {
+    background-image: url(media-queries-phone.jpg);
+    height: 93px;
+    position: relative;
+  }
 
-      div#header h1 {
-        font-size: 140%;
-      }
+  div#header h1 {
+    font-size: 200%; /* Increase font size for h1 */
+  }
 
-      #content {
-        float: none;
-        width: 100%;
-      }
+  #content {
+    float: none;
+    width: 100%;
+  }
 
-      #navigation {
-        float: none;
-        width: auto;
-      }
-    }
+  #navigation {
+    float: none;
+    width: auto;
+  }
+
+  h5 {
+    font-size: 150%; /* Increase font size for h5 */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h6 {
+    font-size: 4vw; /* Increase font size for all heading elements */
+  }
+
+  p,
+  p1,
+  p3 {
+    font-size: 3vw; /* Increase font size for paragraph elements */
+  }
+
+  a {
+    font-size: 3.5vw; /* Increase font size for anchor elements */
+  }
+}
+
 
     .golden-line {
       width: 100%;
