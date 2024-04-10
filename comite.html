@@ -1,307 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MBSMUN XII</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="LOGO.png" sizes="192x192">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-    @media (max-width: 1000px) {
-  footer {
-    font-size: 25px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comite web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="LOGO.png" sizes="192x192">
+    <title>Comités</title>
+    <style>
+        :root {
+        --bg: #1B1B1B;
+        --text: #F9FBF2;
+        --lg: #09814A;
+        --dg:#2D4739;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #495057;
+        }
 
-  header {
-    font-size: 30px;
-  }
+        header {
+            background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png");
+            background-color: var(--dg);
+            background-size: 15%;
+            color:var(--bg);
+            text-align: center;
+            padding: 20px;
+        }
 
-  golden-line {
-    height: 20px;
-  }
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color:var(--bg);
+            box-shadow: 0 0 10px rgba(230, 226, 226, 0.1);
+            border-radius: 5px;
+        }
+        .box2{
+            width: 375px;
+            display: inline-block;
+            margin: 30px auto;
+            padding: 20px;
+            background-color:var(--bg);
+            text-align: center;
+            box-shadow: 0 0 10px rgba(230, 226, 226, 0.1);
+            border-radius: 5px;
+        }
 
-  .carousel-item img {
-    height: 20px;
-    width: auto;
-    object-fit: cover;
-    padding: 1vw;
-  }
-}
+        h1{
+            text-align: center;
+            color: var(--text);
+            margin-top: 50px;
+            font-size: 48pt;
+            font-family:"Protest Strike Regular";
+        }
+        h2{
+            font-size: 24pt;
+            font-family: 'Times New Roman', Times, serif;
+            color:var(--text);
+        }
+        h3 {
+            color: #0074cc;
+        }
 
+        p {
+            font-family:'Times New Roman', Times, serif;
+            text-align: justify;
+            font-size: 14pt;
+            color: var(--text);
+            line-height: 1.6;
+        }
 
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1E314E;
+            color: var(--text);
+        }
+        
+        .shadow-box {
+            width: 800px;
+            height: 200px;
+            background-color: #1a1818c6;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 85px;
+            margin-bottom: 50px;
+          }
+        .container {
+            display:flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .moved-image {
+            position: relative;
+            right: -100px; /* move 50px from the left */
+        }
+        .moved-image2 {
+            position: relative;
+            left: -100px; /* move 50px from the left */
+        }
+        .container2 {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px; /* Increased padding */
+            font-size: 24px; /* Increased font size */
+            color: #121212;
+            text-decoration: none;
+            border-radius: 10px; /* Increased border radius */
+        }
+        .move-image{
+            position: absolute;
+            left: 1%; /* move 50px from the left */
+            top: 1%
+        }
+        .btn {
+            background-color: #121212;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 20px;
+            margin: 2px 1px;
+            opacity: 0.8;
+            transition: 0.3s;
+          }
+          .btn:hover {opacity: 1}
+        .icon {
+            font-size: 60px;
+        }
+        @media (max-width: 1000px) {
+            .shadow-box {
+                width: 80%px;
+                height: 200px;
+                background-color: #1a1818c6;
+                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 85px;
+                margin-bottom: 50px;
+              }
+              .box2{
+                width: 80%;
+                display: inline-block;
+                margin: 30px auto;
+                padding: 20px;
+                background-color:var(--bg);
+                text-align: center;
+                box-shadow: 0 0 10px rgba(230, 226, 226, 0.1);
+                border-radius: 5px;
+            }
+              .back-button {
+                display: inline-block;
+                padding: 10px 20px; /* Increased padding */
+                font-size: 24px; /* Increased font size */
+                color: #121212;
+                text-decoration: none;
+                border-radius: 10px; /* Increased border radius */
+            }
+            .icon {
+                font-size: 45px;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+            main {
+                max-width: 80%;
+                margin: 20px auto;
+                padding: 20px;
+                background-color:var(--bg);
+                box-shadow: 0 0 10px rgba(230, 226, 226, 0.1);
+                border-radius: 5px;
+            }
+            .container2 {
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+            }
+            
 
-    .golden-line {
-      width: 100%;
-      height: 0.6vw;
-      background: linear-gradient(#ffd700, #ffd8e0 50%, transparent 50%);
-    }
+        }
+       
 
-    h5 {
-      font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-      color: #FFF3F3;
-      text-align: center;
-      align-items: center;
-      font-size: 30px;
-      padding-top: 40px;
-    }
-
-    :root {
-      --text: #ffffff;
-      --accent: #1e00ff;
-      --accent-light: #000dff;
-    }
-
-    body {
-      background-color: #1B1B1B;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      margin-bottom: 0.7vw;
-      background-size: 20%;
-    }
-
-    header {
-      color: var(--text);
-      height: 4.3vw;
-      width: auto;
-    }
-
-    h1 {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bold;
-      padding-top: 40px;
-      padding-bottom: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 8vw;
-      text-align: center;
-      text-align: center;
-      background: linear-gradient(180deg, #ffd700, #ffd8e0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    p {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      padding: 8vw;
-      font-size: 1.9vw;
-      text-align: justify;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    p1 {
-      color: #FFFFFF;
-      text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 1.5vw;
-    }
-
-    p3 {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    h2 {
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-      font-size: 2vw;
-      padding-top: 1vw;
-      padding-bottom: 1.7vw;
-    }
-
-    h6 {
-      text-align: center;
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 3vw;
-      margin-top: 0px;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #000000;
-      font-size: 2px;
-      color: #FFFFFF;
-      margin-top: 5vw;
-    }
-    d5 {
-      text-align: center;
-      background-color: #000000;
-      
-      color: #FFFFFF;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    a {
-      color: var(--text);
-      font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-      font-size: 2.3vw;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    h3 {
-      color: var(--text);
-      width: 100%;
-      padding: 15px;
-      background-color: var(--accent-light);
-    }
-
-    .countdown-timer {
-      transform: scale(0.5);
-      display: inline-block;
-    
-      
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    .logo {
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .committees-link {
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .insta-link {
-      text-align: right;
-    }
-    .count {
-      Background-color: #1E314E;
-      padding-top: 6vw;
-    }
-    .wrapper {
-      max-width: 100%;
-      margin: 0 auto;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-    
-    .carousel-item img {
-      height: 57vw;
-      width: auto;
-      object-fit: cover;
-      padding: 3vw;
-    }
-  </style>
+    </style>
 </head>
+
 <body>
-  <br>
-  <div class="top-section">
     <header>
-      <div class="header-content">
-        <div class="logo">
-          <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" height="50vw" align="left">
+        <div class="move-image">
+            <a href="./comittees.html" class="back-button"><button class="btn"> &#8592; Back</button> </a>
         </div>
-        <div class="committees-link">
-          <a href="comittees.html"> Comittees</a>
+        <div class="container">
+        <div class="shadow-box">
+            <h1>Nombre comité</h1>
         </div>
-        <div class="insta-link">
-          <a href="https://www.instagram.com/mbsmun/" target="_blank">
-            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" style="height: 3vw;">
-          </a>
         </div>
-      </div>
     </header>
-    <div class="golden-line"></div>
-  </div>
-  <h1>MBSMUN XII</h1>
-  <div class="counter"></div>
-  <h2>Bienvenidos a la duodécima edición de MBSMUN XII</h2>
-  <p>Si estás leyendo esto, significa que eres solo una pequeña parte de este mundo que nos rodea. Puede sonar como si fuera poco, pero en el transcurso del modelo lograrás darte cuenta de que, aún siendo solo un individuo, se pueden hacer grandes cambios dentro de nuestra sociedad. Afrontarás retos internacionales de hoy en día, mundos ficticios, acontecimientos del pasado y grandes desafíos del futuro; con el objetivo de generar soluciones mediante un ambiente de aprendizaje, construcción y conjunción de distintos puntos de vista. Este año como junta nos vimos enfrentados al reto de crear un modelo que no solo permitiera una gran exigencia intelectual y de oratoria, sino que también sea memorable y divertido para todos los delegados. Se puede decir con certeza que este modelo fue hecho por estudiantes para estudiantes. <br>
-    <br> Atentamente, <br> Junta Directiva MBSMUN XII <br>
-    <br>
-  </p>
-  <div class="count">
-  <h6>Tiempo que falta para el MBSMUN XII</h6>
-  <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-  <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Bogota" data-textcolor="#ffffff" data-date="2024-06-03 18:01" data-digitscolor="#ffffff" data-unitscolor="#ffffff">.</a>
-  </div>
-
-  <div class="container">
-    
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-      </ol>
-
-     
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://i.imgur.com/GzHS98U.jpg" alt="Imagen 1" class="d-block w-100">
+    <div class="container2">
+        <div class="box2">
+            <section>
+                <h2> Tema A: </h2>
+            </section>
         </div>
-        <div class="carousel-item">
-          <img src="https://i.imgur.com/6izgsFB.jpg" alt="Imagen 2" class="d-block w-100">
+        <div class="box2">
+            <section>
+                <h2> Tema B: </h2>
+            </section>
         </div>
-        <div class="carousel-item">
-          <img src="https://i.imgur.com/0LbBRf3.jpg" alt="Imagen 3" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.imgur.com/AJsbNq0.jpg" alt="Imagen 4" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.imgur.com/yCgJtei.jpg" alt="Imagen 5" class="d-block w-100">
-        </div>
-      </div>
-
-      
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
     </div>
-  </div>
+    <main>
+        <section>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis quod quaerat corporis laborum? Non rerum inventore fugiat dolores iusto cum aspernatur repellat. Suscipit, vero. Praesentium sunt, ea aperiam maiores facere, ab perferendis consequatur fuga alias inventore, nulla qui. Reprehenderit ducimus nesciunt ullam omnis. Sequi porro vel recusandae culpa! Enim expedita harum non magni. Nulla consectetur quia voluptate tempore, cum, dignissimos qui fugiat est fuga minus sed deserunt suscipit possimus at incidunt repellat? Alias labore cumque harum, quae, commodi incidunt optio quam voluptate magni necessitatibus in dolor. Enim beatae repudiandae voluptate, quibusdam, numquam ratione quod hic fugit possimus, neque ipsum? Et autem rem iure dolor, ad suscipit consectetur molestias ea, nihil reiciendis delectus non pariatur, in hic. Deserunt vitae eligendi quas nulla voluptate laudantium, quos aliquid deleniti perspiciatis voluptatibus in voluptatem omnis beatae nam praesentium obcaecati possimus quibusdam ut sit! Deleniti nam placeat distinctio illo ducimus officia accusantium expedita, aut adipisci officiis, assumenda quis cum recusandae. Ad et, ipsum, tempora earum tempore aut quos debitis, necessitatibus saepe exercitationem quas ratione repellat ex sed maxime incidunt distinctio dicta accusamus aperiam delectus cupiditate. Impedit perspiciatis facere quis quae voluptatibus veniam, quasi adipisci? Ut odio quasi exercitationem velit quas cupiditate quis fugit est cum deserunt totam vel ad provident omnis minus modi, laborum atque nisi culpa veritatis fugiat quia numquam? Ipsam optio sapiente deserunt veritatis quo, enim adipisci voluptates omnis obcaecati repudiandae debitis natus hic. Natus, eveniet. Mollitia molestias temporibus itaque, suscipit veniam dolorem reiciendis quae repudiandae? Architecto a quae eveniet unde quibusdam?</p>
+            <div class= "container">
+                <!--<img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
+                <img class="moved-image" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px> -->
+            </div>
+            
 
-  <footer>
-    <d5>&copy; 2024 MBSMUN Web Page. All rights reserved.</d5>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-Kcz5C6QlJDQ8pD7qIbzlf3R5Z9tE6yI+bl7R3NsrO0E=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js" integrity="sha384-hNNzmwMqs13Bo9qrhjQezLxkqmebyjR/FA0itf4e1By0WlMFddWJW3HwbEhsX4vR" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha384-8QRJoX3+SDAl9Wvb+x44zv5qK+K6WqHzLv+cy5dRYeYxII1+arT/zsRcOyZlr0Xl" crossorigin="anonymous"></script>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MBS MUN Web Page. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
