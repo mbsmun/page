@@ -191,9 +191,8 @@
             }
             .moved-image {
                 position: relative;
-                left: -2%; /* move 50px from the left */
+                right: 2%; /* move 50px from the left */
                 top: 1%;
-                transition: transform 0.3s ease;
               }
               .back-button {
                 display: inline-block;
@@ -220,9 +219,9 @@
 
 <header>
     <div class="moved-image">
-        <a href="./comittees"  class="back-button">&#8592; Back</a>
+        <a href="./comittees.html" onclick="history.go(-1); return false;" class="back-button"><span class="icon">&#8592;</span> </a>
     </div>  
-    <h1>Our Team</h1><link rel="icon" href="LOGO.png" sizes="192x192">
+    <h1>Our Team</h1>
 </header>
 <div class="container1">
     <div class="feature1">
