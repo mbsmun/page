@@ -12,10 +12,180 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
-  
+    @media (max-width: 1000px) {
+    .golden-line {
+        width: 100%;
+        height: 1vw;
+        background: linear-gradient(#ffd700, #ffd8e0 50%, transparent 50%);
+    }
+
+    h5 {
+        font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        color: #FFF3F3;
+        text-align: center;
+        align-items: center;
+        font-size: 80px;
+        padding-top: 40px;
+    }
+
+    :root {
+        --text: #ffffff;
+        --accent: #1e00ff;
+        --accent-light: #000dff;
+    }
+
+    body {
+        background-color: #1B1B1B;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 0.7vw;
+        background-size: 20%;
+    }
+
+    header {
+        color: var(--text);
+        height: 8vw;
+        width: auto;
+    }
+
+    h1 {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 8vw;
+        text-align: center;
+        background: linear-gradient(180deg, #ffd700, #ffd8e0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    p {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        padding: 8vw;
+        font-size: 2.9vw;
+        text-align: justify;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    p1 {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.5vw;
+    }
+
+    p3 {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    h2 {
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        font-size: 3.5vw;
+        padding-top: 1vw;
+        padding-bottom: 1.7vw;
+    }
+
+    h6 {
+        text-align: center;
+        color: var(--text);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 3vw;
+        margin-top: 0px;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #000000;
+        font-size: 3vw;
+        color: #FFFFFF;
+        margin-top: 5vw;
+    }
+    d5 {
+        text-align: center;
+        background-color: #000000;
+        color: #FFFFFF;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    a {
+        color: var(--text);
+        font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        font-size: 2.3vw;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        color: var(--text);
+        width: 100%;
+        padding: 15px;
+        background-color: var(--accent-light);
+    }
+
+    .countdown-timer {
+        transform: scale(0.8);
+        display: inline-block;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .logo {
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .committees-link {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .insta-link {
+        text-align: right;
+    }
+
+    .count {
+        background-color: #1E314E;
+        padding-top: 6vw;
+    }
+
+    .wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .carousel-item img {
+        height: 40vw;
+        width: auto;
+        object-fit: contain;
+        padding: 3vw;
+    }
+}
 
 
-
+ @media (min-width: 1000px) {
     .golden-line {
       width: 100%;
       height: 0.6vw;
@@ -111,7 +281,7 @@
     footer {
       text-align: center;
       background-color: #000000;
-      font-size: 2px;
+      font-size: 2vw;
       color: #FFFFFF;
       margin-top: 5vw;
     }
@@ -183,34 +353,11 @@
 
     
     .carousel-item img {
-      height: 57vw;
-      width: 30vw;
+      height: 80vh;
+      width: auto;
       object-fit: cover;
       padding: 3vw;
-    }
-  @media (max-width: 1100px) {
-  footer {
-    font-size: 3vw;
-  }
-
-  header {
-    font-size: 30px;
-  }
-
-  golden-line {
-    height: 20px;
-  }
-
-  .carousel-item img {
-    height: 20px;
-    width: 5px;
-    object-fit: cover;
-    padding: 1vw;
-  }
-  .logo{
-    height: 2vw;
-  }
-}
+    } }
   </style>
 </head>
 <body>
@@ -297,6 +444,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha384-8QRJoX3+SDAl9Wvb+x44zv5qK+K6WqHzLv+cy5dRYeYxII1+arT/zsRcOyZlr0Xl" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
 
 
 
