@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <html lang="es">
@@ -25,10 +26,12 @@
         }
 
         header {
-            background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png");
+            background-image:url("{img}");
             background-color: var(--dg);
-            background-size: 15%;
+            background-size: cover;
             color:var(--bg);
+            background-repeat: no-repeat;
+            background-position: 50%;
             text-align: center;
             padding: 20px;
         }
@@ -46,6 +49,7 @@
             display: inline-block;
             margin: 30px auto;
             padding: 20px;
+            height: 100%;
             background-color:var(--bg);
             text-align: center;
             box-shadow: 0 0 10px rgba(230, 226, 226, 0.1);
@@ -213,25 +217,16 @@
         </div>
         <div class="container">
         <div class="shadow-box">
-            <h1>Nombre comité</h1>
+            <h1>{name}</h1>
         </div>
         </div>
     </header>
     <div class="container2">
-        <div class="box2">
-            <section>
-                <h2> Tema A: </h2>
-            </section>
-        </div>
-        <div class="box2">
-            <section>
-                <h2> Tema B: </h2>
-            </section>
-        </div>
+        {temas}
     </div>
     <main>
         <section>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis quod quaerat corporis laborum? Non rerum inventore fugiat dolores iusto cum aspernatur repellat. Suscipit, vero. Praesentium sunt, ea aperiam maiores facere, ab perferendis consequatur fuga alias inventore, nulla qui. Reprehenderit ducimus nesciunt ullam omnis. Sequi porro vel recusandae culpa! Enim expedita harum non magni. Nulla consectetur quia voluptate tempore, cum, dignissimos qui fugiat est fuga minus sed deserunt suscipit possimus at incidunt repellat? Alias labore cumque harum, quae, commodi incidunt optio quam voluptate magni necessitatibus in dolor. Enim beatae repudiandae voluptate, quibusdam, numquam ratione quod hic fugit possimus, neque ipsum? Et autem rem iure dolor, ad suscipit consectetur molestias ea, nihil reiciendis delectus non pariatur, in hic. Deserunt vitae eligendi quas nulla voluptate laudantium, quos aliquid deleniti perspiciatis voluptatibus in voluptatem omnis beatae nam praesentium obcaecati possimus quibusdam ut sit! Deleniti nam placeat distinctio illo ducimus officia accusantium expedita, aut adipisci officiis, assumenda quis cum recusandae. Ad et, ipsum, tempora earum tempore aut quos debitis, necessitatibus saepe exercitationem quas ratione repellat ex sed maxime incidunt distinctio dicta accusamus aperiam delectus cupiditate. Impedit perspiciatis facere quis quae voluptatibus veniam, quasi adipisci? Ut odio quasi exercitationem velit quas cupiditate quis fugit est cum deserunt totam vel ad provident omnis minus modi, laborum atque nisi culpa veritatis fugiat quia numquam? Ipsam optio sapiente deserunt veritatis quo, enim adipisci voluptates omnis obcaecati repudiandae debitis natus hic. Natus, eveniet. Mollitia molestias temporibus itaque, suscipit veniam dolorem reiciendis quae repudiandae? Architecto a quae eveniet unde quibusdam?</p>
+            <p>{description}</p>
             <div class= "container">
                 <!--<img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
                 <img class="moved-image" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px> -->
@@ -240,6 +235,16 @@
 
         </section>
     </main>
+
+    <script defer>
+        let a = document.getElementsByClassName("box2")[1].clientHeight-40
+        let b = document.getElementsByClassName("box2")[0].clientHeight-40
+        let diff = -Math.abs(a-b)
+        change = a<b ? document.getElementsByClassName("box2")[1] : document.getElementsByClassName("box2")[0]
+        change.style.height = (a<b ? b : a) + "px"
+        change.style.position = "relative"
+        change.style.top = diff + "px"
+    </script>
 
     <footer>
         <div class="container">
