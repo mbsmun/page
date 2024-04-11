@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="LOGO.png" sizes="192x192">
     <style>
         /* clears the â€˜Xâ€™ from Chrome */
 input[type="search"]::-webkit-search-decoration,
@@ -196,7 +195,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                 width: 90%;
                 position: relative;
                 left: 5%;
-                aspect-ratio: 1/1;
+                aspect-ratio: 16/9;
                 display: inline-block;
                 background-color: var(--dg);
                 margin: 0 0.4vw;
@@ -282,58 +281,73 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
         #fifa::before{
             background-image: url("POSTERS/fifa.jpeg");
+            background-position: 50%;
         }
 #sponge_bob::before{
             background-image: url("POSTERS/sponge-bob.jpeg");
+            background-position: 50%;
         }
 #unoosa::before{
             background-image: url("POSTERS/unoosa.png");
+            background-position: 50%;
         }
 #hrw::before{
-            background-image: url("https://i.ibb.co/30xdg6V/image.jpg");
+            background-image: url("POSTERS/hrw.jpg");
+            background-position: 50%;
         }
 #acnur::before{
             background-image: url("POSTERS/acnur.png");
+            background-position: 50%;
         }
 #sochum::before{
             background-image: url("POSTERS/sochum.jpg");
+            background-position: 50%;
         }
 #star_wars::before{
             background-image: url("POSTERS/star-wars.jpg");
+            background-position: 50%;
         }
 #comite_historico::before{
             background-image: url("POSTERS/comite-historico.jpg");
+            background-position: 50%;
         }
 #iaea::before{
             background-image: url("POSTERS/iaea.jpg");
+            background-position: 50%;
         }
 #security_council::before{
             background-image: url("POSTERS/security-council.jpeg");
+            background-position: 50%;
         }
 #marvel::before{
             background-image: url("POSTERS/marvel.jpg");
+            background-position: 50%;
         }
 #who::before{
             background-image: url("POSTERS/who.png");
+            background-position: 50%;
         }
 #crisis_colombia::before{
             background-image: url("POSTERS/crisis-colombia.jpg");
+            background-position: 50%;
         }
 #unodc::before{
             background-image: url("POSTERS/unodc.jpeg");
+            background-position: 50%;
         }
 #onu_femmes::before{
             background-image: url("POSTERS/onu-femmes.png");
+            background-position: 50%;
         }
 
     </style>
-    <title>Committees</title>
+    <title>Document</title>
 </head>
 <body>
     <header>
         <img src="https://www.mbs.edu.co/magic/wp-content/uploads/2022/06/LOGO-MBS-DEGRADE-AZUL-NEGRO1-04.webp" alt="" srcset="">
         <nav>
-            <a href="./">Home</a>
+            <a href="../">Home</a>
             <a href="ourteam.html">Our Team</a>
         </nav>
     </header>
@@ -434,7 +448,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         function checkFilt(){
             let elems = document.getElementById("elements").children
             for (let i = 0; i<elems.length; i++){
-                if (elems[i].id == "footer") continue
                 cont = false
                 let _temp = filterChosen.values()
                 for (let n = 0; n<filterChosen.size; n++){
