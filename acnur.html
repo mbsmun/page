@@ -38,7 +38,7 @@
             aspect-ratio: 4;
         }
 
-        main {
+       main {
             max-width: 800px;
             margin: 30px auto;
             padding: 20px;
@@ -58,6 +58,7 @@
             border-radius: 5px;
         }
 
+
         h1{
             text-align: center;
             color: var(--text);
@@ -74,6 +75,7 @@
             color: #0074cc;
         }
 
+
         p {
             font-family:'Times New Roman', Times, serif;
             text-align: justify;
@@ -82,13 +84,14 @@
             line-height: 1.6;
         }
 
+
         footer {
             text-align: center;
             padding: 10px;
             background-color: #1E314E;
             color: var(--text);
         }
-        
+       
         .shadow-box {
             width: 800px;
             height: 200px;
@@ -105,7 +108,7 @@
             height: 100%;
             display:flex;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
         }
         .moved-image {
             position: relative;
@@ -121,10 +124,45 @@
             padding: 20px;
             text-align: center;
         }
+        .container3{
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+        }
         .features {
             display: flex;
             justify-content: space-between;
             margin-top: 50px;
+        }
+        .feature {
+            width: 29.5%;
+            display: inline-block;
+            margin: 0 0.4vw;
+            border-radius: 5px;
+            margin-bottom: 1%;
+            cursor: pointer;
+            justify-content: space-between;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .feature2 {
+            width: 29.5%;
+            display:inline-block;
+            margin: 0 0.4vw;
+            border-radius: 5px;
+            margin-bottom: 1%;
+            cursor: pointer;
+            justify-content: space-between;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .feature3 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0.4vw;
+            border-radius: 5px;
+            padding:20px;
         }
         .back-button {
             display: inline-block;
@@ -154,7 +192,24 @@
         .icon {
             font-size: 60px;
         }
+        .responsive-image{
+            width: 100%;
+            height: auto;
+          }
         @media (max-width: 1000px) {
+            .feature2 {
+                left: -1%;
+                width: 90%;
+                display: flex;
+                position:relative;
+                margin: 0 0.4vw;
+                border-radius: 5px;
+                margin-bottom: 1%;
+                cursor: pointer;
+                justify-content: space-between;
+                padding: 20px;
+                transition: transform 0.3s ease;
+            }
             .shadow-box {
                 width: 80%px;
                 height: 200px;
@@ -190,7 +245,7 @@
             .container {
                 display: flex;
                 justify-content: center;
-                align-items: center; 
+                align-items: center;
             }
             main {
                 max-width: 80%;
@@ -206,9 +261,17 @@
                 padding: 20px;
                 text-align: center;
             }
-            
+            .container3{
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+            }
+           
+
 
         }
+
        
 
     </style>
@@ -236,12 +299,25 @@
             </section>
         </div>
     </div>
+    <!--<div class="section">
+    <div class="container2">
+        <div class="feature2">
+            <img src="https://i.ibb.co/cws3ysV/Whats-App-Image-2024-03-21-at-5-36-03-AM.jpg" alt="foto secretaria general" class="responsive-image">
+        </div>
+        <div class="feature2">
+            <img src="https://i.ibb.co/cws3ysV/Whats-App-Image-2024-03-21-at-5-36-03-AM.jpg" alt="foto secretaria general" class="responsive-image">
+        </div>
+    </div>
+   </div> -->
     <main>
         <section>
             <p>Para el 2020, 281 millones de personas, aproximadamente el 3.5% de la población global, vivían fuera de su país de origen. Bien sean en condición de migrantes o como refugiados, estas personas se ven expuestas tanto a vulneraciones de sus derechos humanos, como a discursos de odio y rechazo por parte de sus conciudadanos. Este año en ACNUR, se buscará que ustedes los delegados le den una voz a quienes su estatus migratorio les impide hablar por ellos, luchar por sus derechos y buscar soluciones para garantizarles una vida justa y digna. En ustedes se depara el futuro de esta sección de la población… ¿Están listos para el reto?</p>
-            <div class= "container">
-                <!--<img class="moved-image2" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px>
-                <img class="moved-image" src="https://img.redbull.com/images/c_fill,g_auto,w_450,h_600/q_auto:low,f_auto/redbullcom/2017/07/29/e845daf6-0904-4e66-9b57-43ad2a81b846/foto-tomada-con-el-celular.jpg" alt="photo" width= 200px> -->
+            <div class= "container3">
+                <div class="feature3">
+                    <a href=""><img src="https://i.ibb.co/zPVcndD/Boton-handbook-1.png" alt="Boton-handbook-1"></a>
+                    <a href=""><img src="https://i.ibb.co/vmbcyNx/Boton-Theme-Guide-1.png" alt="Boton-Theme-Guide-1"></a>
+                    <a href=""><img src="https://i.ibb.co/R7qLw1L/Boton-crisis-1.png" alt="Boton-crisis-1"></a>
+                </div>
             </div>
             
 
